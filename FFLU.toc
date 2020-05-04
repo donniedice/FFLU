@@ -1,0 +1,6 @@
+## Interface: 32638
+## Title:|cffffffffFinal Fantasy|r Level Up
+## Author: DonnieDice, MargoMatrix
+## Version: 1.0a
+## Notes: Grats!
+main.lua
