@@ -1,4 +1,9 @@
+<<<<<<< 05a24647382986af62aa5983379d9c333400efca
 ## Interface: 32638
+=======
+
+## Interface: 90002
+>>>>>>> Updated for SHADOWLANDS
 ## Title:|cffffffffFinal Fantasy|r Level Up
 ## Author: DonnieDice, MargoMatrix
 ## Version: 1.0a
