@@ -1,0 +1,12 @@
+## Interface: 90200
+## Version: 1.0.2d
+## Title:|cffffffffFinal Fantasy|r Level Up!
+## Author: DonnieDice
+## Notes: Grats!
+
+## X-Category: UI Media, Questing & Leveling, Audio & Video, Miscellaneous
+## X-Website: https://github.com/donniedice/FFLU
+## X-Curse-Project-ID: 305470
+## X-WoWI-ID: 26252
+
+main.lua
