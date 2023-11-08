@@ -1,5 +1,5 @@
-## Interface: 100107
-## Version: 1.0.7
+## Interface: 100200
+## Version: 1.0.8
 ## Title:|cffff7d00Final Fantasy|r Level Up!
 ## Author: DonnieDice
 ## Notes: Grats!
