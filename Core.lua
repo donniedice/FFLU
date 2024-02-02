@@ -1,4 +1,4 @@
---v1.0.8
+--v1.0.9
 
 -- Level up sound effect
 -- This function plays a sound effect when the player levels up
