@@ -19,16 +19,33 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure Git user
+        run: |
+          git config --global user.name "donniedice"
+          git config --global user.email "donniedice@protonmail.com"
+          
+      - name: Extract Version from TOC
+        id: extract_version
+        run: |
+          version=$(grep -oP '^## Version: \K(.*)' ./FFLU.toc)
+          echo "::set-output name=version::$version"
+
       - name: Package and Release
         uses: BigWigsMods/packager@master
 
-      - name: Package and Release for Vanilla Classic
-        uses: BigWigsMods/packager@master
-        with:
-          args: -g classic
+      - name: Read CHANGES.md
+        id: read_changes
+        run: |
+          changes=$(cat CHANGES.md)
+          echo "changes=$changes" >> $GITHUB_ENV
 
-      - name: Package and Release for Cataclysm Classic
-        uses: BigWigsMods/packager@master
+      - name: Create Draft Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: -g cata
-          
+          tag_name: ${{ github.ref }}
+          draft: true
+          release_name: ${{ steps.extract_version.outputs.version }}
+          body: ${{ steps.read_changes.outputs.changes }}

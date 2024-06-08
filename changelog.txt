@@ -1,3 +1,11 @@
+v2.0.3-------------------------------------------------------------------
+- Removed - Notation - [core.lua]
+- Updated - github/workflow - [release.yml]
+- Removed - Version # - [.pkgmeta]
+- Removed - Version # - [README.md]
+- Removed - Version # - [CHANGES.md]
+v2.0.2-------------------------------------------------------------------
+- Trying to fix github workflows
 v2.0.1-------------------------------------------------------------------
 - Updated - ToC for _retail_ - Dark Heart (10.2.7.54604) [ToC.100207]
 - Added   - Email - [FFLU.toc, FFLU_Vaniilla.toc, FFLU_Cata.toc]
