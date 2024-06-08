@@ -1,8 +1,9 @@
 ## Interface: 100206
-## Version: 2.0.0
+## Version: 2.0.1
 ## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r - |cff8080ff2.0.0|r 
 ## Notes: Play the Final Fantasy level up sound!.|n|r   |cffffe568By Uivi US-BleedingHollow|r
 ## Author: DonnieDice
+## Email: donniedice@protonmail.com
 ## IconTexture: Interface\AddOns\FFLU\Images\icon
 
 ## X-Category: UI Media, Questing & Leveling, Audio & Video, Miscellaneous
@@ -11,4 +12,4 @@
 ## X-Wago-ID: Xb6XE0Kp
 ## X-WoWI-ID: 26252
 
-Core.lua
+data\core.lua
