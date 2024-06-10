@@ -1,17 +1,10 @@
 local frame_a = CreateFrame("Frame")
 frame_a:RegisterEvent("PLAYER_LEVEL_UP")
 frame_a:SetScript("OnEvent", function(self, event, ...)
-	PlaySoundFile("Interface\\Addons\\FFLU\\Sounds\\FFLU.ogg", "Master")
+	PlaySoundFile("Interface\\Addons\\FFLU\\sounds\\final_fantasy_med.ogg", "Master")
 end)
 local frame_b = CreateFrame("Frame")
 frame_b:RegisterEvent("ADDON_LOADED")
 frame_b:SetScript("OnEvent", function(self, event, ...)
 	MuteSoundFile(569593)
-end)
-local frame_c = CreateFrame("Frame")
-frame_c:RegisterEvent("PLAYER_LOGIN")
-frame_c:SetScript("OnEvent", function(self, event, text, ...)
-	if event == "PLAYER_LOGIN" then
-		print("|cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r Functionality has been merged into |cff05dffaB|r|cffffffffetter|r |cff05dffaL|r|cffffffffevel|r |cff05dffaU|r|cffffffffp!|r.")
-	end
 end)
