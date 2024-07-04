@@ -1,4 +1,1 @@
-- Removed - Login spam - [core.lua]
-- Changed - Sounds folder to lowercase - [/sounds]
-- Changed - SoundFile name to be human readable - [final_fantasy_med.ogg]
-- Removed - Merge PSA - [README.md]
+- Updated - [release.yml]
