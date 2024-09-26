@@ -1,7 +1,2 @@
-- Added - guidelines.md to /docs/
-- Added - /docs/ folder
-- Added - Player login message for addon load status - [core.lua]
-- Moved - CHANGES.md and changelog.txt to /docs/
-- Updated - pkgmeta to reflect new file locations
-- Updated - README.md to match the structure and style of the BLU addon
-- Cleaned - Combined event frames for PLAYER_LEVEL_UP and ADDON_LOADED into a single frame - [core.lua]
+- Fixed - Sound trigger - [core.lua]
+- Added - Icon to welcome message - [core.lua]
