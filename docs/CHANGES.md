@@ -1,2 +1,1 @@
-- Fixed - Misspelled welcome message function - [data/core.lua]
-- Updated - Restructured readme - [README.md]
+- Fixed - Corrected the `DisplayWelcomeMessage` function call to properly display the welcome message on player login
