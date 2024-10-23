@@ -1,1 +1,2 @@
-- Updated - ToC for _retail_ - WOW20TH (11.0.5.57171) [ToC.110005]
+- Fixed - Misspelled welcome message function - [data/core.lua]
+- Updated - Restructured readme - [README.md]

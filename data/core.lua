@@ -14,7 +14,7 @@ end
 
 
 -- Display a message on player login
-local function DisplayOnLoginMessage()
+local function DisplayWelcomeMessage()
     print("[|Tinterface/addons/FFLU/images/icon:16:16|t - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r] |cffffe568Loaded!|r |cff8080ff(v2.1.3)|r")
 end
 
