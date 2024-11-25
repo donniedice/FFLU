@@ -6,7 +6,7 @@ local FFLU = {} -- Create a namespace to avoid global variable pollution
 
 -- Play custom sound on level up
 function FFLU.PlayCustomLevelUpSound()
-    PlaySoundFile("Interface\\Addons\\FFLU\\final_fantasy_med.ogg", "Master")
+    PlaySoundFile("Interface\\Addons\\FFLU\\sounds\\final_fantasy_med.ogg", "Master")
 end
 
 -- Mute default level up sound
@@ -16,7 +16,7 @@ end
 
 -- Display a welcome message on player login
 function FFLU.DisplayWelcomeMessage()
-    print("[|Tinterface/addons/FFLU/images/icon:16:16|t - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r] |cffffe568Loaded!|r |cff8080ff(v2.1.3)|r")
+    print("|Tinterface/addons/FFLU/images/icon:16:16|t - [|cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r] |cffffe568Loaded!|r |cff8080ff(v2.1.3)|r")
 end
 
 -- Event Registration
