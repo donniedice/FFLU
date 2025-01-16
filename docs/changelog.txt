@@ -1,3 +1,5 @@
+v2.1.9-------------------------------------------------------------------
+- Updated - ToC for _retail_ - [ToC.110007]
 v2.1.8-------------------------------------------------------------------
 - Fixed - Sound not playing due to incorrect sound file path
 - Updated - ToC for _classic_era_ - WOW20TH (1.15.5.57716) [ToC.11505]
