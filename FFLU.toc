@@ -1,9 +1,9 @@
-## Interface: 110007
-## Version: 2.1.9
-## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r - |cff8080ff2.1.9|r 
-## Notes: Play the Final Fantasy level up sound!.|n|r   |cffffe568By Uivi US-BleedingHollow|r
+## Interface: 110100
+## Version: 2.1.10
+## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r
+## Notes: Play the Final Fantasy level up sound!.|n|r   |cffffe568By DonnieDice|r
 ## Author: DonnieDice
-## Email: donniedice@protonmail.com
+## Email: joseph@donniedice.com
 ## IconTexture: Interface\AddOns\FFLU\Images\icon
 
 ## X-Category: UI Media, Questing & Leveling, Audio & Video, Miscellaneous
