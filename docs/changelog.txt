@@ -1,3 +1,6 @@
+v2.1.11------------------------------------------------------------------
+- Updated - TOC version bump for Retail, Vanilla, and Cata [FFLU.toc, FFLU_Vanilla.toc, FFLU_Cata.toc]
+- Updated - Email address updated in TOC files for Retail, Vanilla, and Cata [FFLU.toc, FFLU_Vanilla.toc, FFLU_Cata.toc]
 v2.1.10------------------------------------------------------------------
 - Updated - Retail TOC to reflect version 110100 [FFLU.toc]
 - Updated - Retail BLU version number to v5.2.3 in TOC [FFLU.toc]
