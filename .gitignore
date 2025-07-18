@@ -42,6 +42,7 @@ build/
 # Claude/AI artifacts
 .claude/
 claude_artifacts/
+addon_transformation_prompt.md
 
 # Test files
 test/
