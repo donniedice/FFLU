@@ -63,8 +63,51 @@ local L = {
     ["COMMUNITY_MESSAGE"] = "Part of the RealmGX Community - join us at discord.gg/N7kdKAHVVF"
 }
 
+-- Russian localization by ZamestoTV
+if locale == "ruRU" then
+    L["ADDON_ENABLED"] = "Аддон |cff00ff00включен|r"
+    L["ADDON_DISABLED"] = "Аддон |cffff0000отключен|r"
+    L["PLAYING_TEST"] = "Воспроизведение тестового звука..."
+    L["SOUND_VARIANT_SET"] = "Вариант звука установлен на: |cffffffff%s|r"
+    L["WELCOME_MESSAGE"] = "Добро пожаловать в FFLU! Введите |cffffffff/fflu help|r для команд"
+    
+    L["ERROR_PREFIX"] = "|cffff0000Ошибка FFLU:|r"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Недопустимый вариант звука. Используйте: high, medium или low"
+    L["ERROR_UNKNOWN_COMMAND"] = "Неизвестная команда. Введите |cffffffff/fflu help|r для доступных команд"
+    L["ERROR_SOUND_FAILED"] = "Не удалось воспроизвести звуковой файл"
+    L["ERROR_INVALID_SOUND_VARIANT"] = "Недопустимый вариант звука"
+    
+    L["HELP_HEADER"] = "|cffffe568=== Команды FFLU ===|r"
+    L["HELP_HELP"] = "|cffffffff/fflu help|r - Показать эту помощь"
+    L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Включить аддон"
+    L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Отключить аддон"
+    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Переключить аддон вкл/выкл"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Воспроизвести тестовый звук"
+    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Показать текущие настройки"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <вариант>|r - Установить звук (high/medium/low)"
+    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Сбросить все настройки на стандартные"
+    
+    L["STATUS_HEADER"] = "|cffffe568=== Статус FFLU ===|r"
+    L["STATUS_STATUS"] = "Статус:"
+    L["STATUS_SOUND"] = "Вариант звука: |cffffffff%s|r"
+    L["STATUS_MUTE"] = "Отключение звука по умолчанию:"
+    L["STATUS_VERSION"] = "Версия: |cffffffff%s|r"
+    L["STATUS_VOLUME"] = "Канал громкости: |cffffffff%s|r"
+    
+    L["ENABLED_STATUS"] = "|cff00ff00Включен|r"
+    L["DISABLED_STATUS"] = "|cffff0000Отключен|r"
+    L["YES"] = "|cff00ff00Да|r"
+    L["NO"] = "|cffff0000Нет|r"
+    L["TYPE_HELP"] = "Введите |cffffffff/fflu help|r для команд"
+    
+    L["SOUND_HIGH"] = "Высокий"
+    L["SOUND_MEDIUM"] = "Средний"
+    L["SOUND_LOW"] = "Низкий"
+    
+    L["COMMUNITY_MESSAGE"] = "Часть сообщества RealmGX - присоединяйтесь к нам на discord.gg/N7kdKAHVVF"
+
 -- German localization
-if locale == "deDE" then
+elseif locale == "deDE" then
     L["ADDON_ENABLED"] = "Addon |cff00ff00aktiviert|r"
     L["ADDON_DISABLED"] = "Addon |cffff0000deaktiviert|r"
     L["PLAYING_TEST"] = "Testsound wird abgespielt..."
