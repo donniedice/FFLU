@@ -11,7 +11,7 @@ FFLU (Final Fantasy Level-Up!) is a professional World of Warcraft addon that pl
 - **data/core.lua**: Main addon functionality with advanced features
 - **data/locales.lua**: Multi-language support (English, German, French, Spanish)
 - **sounds/**: Three variants of Final Fantasy level-up sound (high, medium, low)
-- **Images/icon.tga**: Addon icon displayed in all output
+- **images/icon.tga**: Addon icon displayed in all output
 - **FFLU.toc**: TOC file for retail WoW (Interface: 110105)
 - **FFLU_Cata.toc**: TOC file for Classic Cataclysm (Interface: 40402)
 - **FFLU_Vanilla.toc**: TOC file for Classic WoW (Interface: 11507)

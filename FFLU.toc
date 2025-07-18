@@ -4,7 +4,7 @@
 ## Notes: Enhanced Final Fantasy level-up sound with slash commands, settings, and multi-language support.|n|r|cff1f1d1eBy DonnieDice|r
 ## Author: DonnieDice
 ## Email: donniedice@protonmail.com
-## IconTexture: Interface\AddOns\FFLU\Images\icon
+## IconTexture: Interface\AddOns\FFLU\images\icon
 ## SavedVariables: FFLUSettings
 
 ## X-Category: UI Media, Questing & Leveling, Audio & Video, Miscellaneous

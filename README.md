@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/donniedice/FFLU/main/Images/logo.png" alt="FFLU Logo" width="128" height="128">
+<img src="https://raw.githubusercontent.com/donniedice/FFLU/main/images/logo.png" alt="FFLU Logo" width="128" height="128">
 
 [![FFLU Icon](https://img.shields.io/badge/FFLU-Final%20Fantasy%20Level%20Up!-FFE568?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==&logoColor=white)](https://github.com/donniedice/FFLU)
 
