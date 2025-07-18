@@ -1,6 +1,6 @@
 --=====================================================================================
 -- FFLU | Final Fantasy Level-Up! - locales.lua
--- Version: 2.1.15
+-- Version: 2.1.16
 -- Author: DonnieDice
 -- Description: Multi-language localization system for FFLU
 --=====================================================================================

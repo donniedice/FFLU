@@ -467,10 +467,18 @@ Both methods will:
 - Upload packaged .zip files to release
 - Mark beta/alpha releases as pre-release
 
-## Example Multi-Version Interface Lines:
-- Retail: `## Interface: 110105, 110002, 110000, 100207, 100206, 100205, 100200, 100107, 100105, 100100, 100002, 100000`
-- MoP: `## Interface: 50500, 50401, 50400, 50300, 50200, 50100, 50001`
-- Cata: `## Interface: 40402, 40401, 40400, 40300, 40200, 40100, 40000`
-- WotLK: `## Interface: 30403, 30402, 30401, 30400, 30300, 30200, 30100, 30000`
-- BC: `## Interface: 20504, 20503, 20502, 20501, 20500, 20400, 20300, 20200, 20100, 20000`
-- Vanilla: `## Interface: 11507, 11506, 11505, 11503, 11502, 11501, 11500, 11404, 11403, 11402, 11401, 11400, 11307, 11306, 11305, 11304, 11303, 11302`
+## Important CurseForge Compatibility Note:
+**CRITICAL**: CurseForge API has limitations on the number of game versions per upload. Using multiple interface versions in TOC files can cause 500 errors during upload. For reliable CurseForge uploads, use only ONE interface version per TOC file.
+
+## Recommended Interface Versions:
+- Retail: `## Interface: 110105`
+- MoP Classic: `## Interface: 50500`
+- Cata Classic: `## Interface: 40402`
+- WotLK Classic: `## Interface: 30403`
+- BC Classic: `## Interface: 20504`
+- Vanilla/Classic Era: `## Interface: 11507`
+
+## Alternative for Local Testing (NOT for CurseForge):
+If you need backward compatibility for local testing only, you can use multiple versions:
+- Example: `## Interface: 110105, 110002, 110000`
+- **WARNING**: This will likely cause CurseForge uploads to fail with 500 errors

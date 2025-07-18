@@ -1,6 +1,6 @@
-## Interface: 30403, 30402, 30401, 30400, 30300, 30200, 30100, 30000
-## Version: 2.1.15
-## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r - |cff8080ff2.1.15|r 
+## Interface: 30403
+## Version: 2.1.16
+## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r - |cff8080ff2.1.16|r 
 ## Notes: Enhanced Final Fantasy level-up sound with slash commands, settings, and multi-language support.|n|r|cff1f1d1eBy DonnieDice|r
 ## Author: DonnieDice
 ## Email: donniedice@protonmail.com

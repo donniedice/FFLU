@@ -1,5 +1,19 @@
 # FFLU Changelog
 
+## v2.1.16 - CurseForge Compatibility Fix
+
+### Fixed
+- **CurseForge Upload**: Resolved 500 errors by limiting interface versions in TOC files
+- **Multi-Version Support**: Simplified to single interface version per TOC for better compatibility
+- **Release Workflow**: Improved stability for automated releases
+
+### Technical Improvements
+- **TOC Optimization**: Each TOC file now declares only the latest interface version
+- **API Compatibility**: Reduced payload size for CurseForge API calls
+- **Error Prevention**: Streamlined version declarations prevent server timeouts
+
+This hotfix ensures reliable uploads to all distribution platforms including CurseForge.
+
 ## v2.1.15 - Enhanced Release Automation
 
 ### Added
