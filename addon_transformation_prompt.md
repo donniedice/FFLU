@@ -244,9 +244,128 @@ desktop.ini
 ```
 
 ### 6.3 Create GitHub Actions Workflow
-Create `.github/workflows/release.yml` for automated releases (if not exists).
+Create `.github/workflows/release.yml` for automated releases:
+```yaml
+name: Package and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (e.g., 2.1.15)'
+        required: true
+        type: string
+      release_type:
+        description: 'Release type'
+        required: true
+        default: 'release'
+        type: choice
+        options:
+          - release
+          - beta
+          - alpha
+  push:
+    tags:
+      - 'v*'  # Also triggers on manual tag pushes
+
+env:
+  CF_API_KEY: ${{ secrets.CF_API_KEY }}
+  WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+  WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+  GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name "[YOUR_USERNAME]"
+          git config --global user.email "[YOUR_EMAIL]"
+
+      - name: Determine Version and Release Type
+        id: version_info
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            VERSION="v${{ github.event.inputs.version }}"
+            RELEASE_TYPE="${{ github.event.inputs.release_type }}"
+          else
+            VERSION="${GITHUB_REF#refs/tags/}"
+            if [[ "$VERSION" == *"beta"* ]]; then
+              RELEASE_TYPE="beta"
+            elif [[ "$VERSION" == *"alpha"* ]]; then
+              RELEASE_TYPE="alpha"
+            else
+              RELEASE_TYPE="release"
+            fi
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "release_type=$RELEASE_TYPE" >> $GITHUB_OUTPUT
+
+      - name: Create Tag (if workflow_dispatch)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          git tag -a "${{ steps.version_info.outputs.version }}" -m "Version ${{ steps.version_info.outputs.version }}"
+          git push origin "${{ steps.version_info.outputs.version }}"
+
+      - name: Package and Release
+        uses: BigWigsMods/packager@master
+        with:
+          release-type: ${{ steps.version_info.outputs.release_type }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version_info.outputs.version }}
+          name: ${{ steps.version_info.outputs.version }} - ${{ github.event.repository.name }}
+          body_path: docs/CHANGES.md
+          draft: false
+          prerelease: ${{ steps.version_info.outputs.release_type != 'release' }}
+          files: |
+            .release/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
 
 ## Phase 7: Version Control
+
+### 7.1 Version Bump Process
+When creating a new release:
+1. Update version in all TOC files (both `## Version:` and in `## Title:` where displayed)
+2. Update version constant in core.lua (`ADDON_VERSION`)
+3. Update version in locales.lua header comment
+4. Update docs/CHANGES.md with new version section
+5. Commit changes with descriptive message
+6. Push to main branch
+
+### 7.2 Release Methods
+
+#### Method 1: GitHub Actions Manual Dispatch (Recommended)
+1. Push version bump commit to main
+2. Go to GitHub Actions → "Package and Release" workflow
+3. Click "Run workflow"
+4. Enter version number (e.g., "2.1.15")
+5. Select release type
+6. Workflow automatically:
+   - Creates git tag
+   - Packages addon for all platforms
+   - Creates GitHub release with changelog
+   - Uploads packaged files
+
+#### Method 2: Traditional Tag Push
+1. Create and push tag locally:
+   ```bash
+   git tag -a v2.1.15 -m "Version 2.1.15"
+   git push origin v2.1.15
+   ```
+2. Workflow triggers automatically on tag detection
+
+## Phase 8: Version Control Commands
 
 1. Update version to 2.1.14 in:
    - All TOC files (with multiple interface versions)
@@ -272,14 +391,26 @@ feat: RGX Mods v2.1.14 transformation
 Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
-3. Create and push v2.1.14 tag:
+3. Commit and push changes:
 ```bash
 git add -A
 git commit -m "feat: RGX Mods v2.1.14 transformation"
-git tag -a v2.1.14 -m "Version 2.1.14 - RGX Mods transformation"
 git push origin main
-git push origin v2.1.14
 ```
+
+4. Create release using GitHub Actions:
+   - Go to Actions tab on GitHub
+   - Select "Package and Release" workflow
+   - Click "Run workflow"
+   - Enter version number (e.g., 2.1.14)
+   - Select release type
+   - Click "Run workflow"
+
+   Or manually create tag and push:
+   ```bash
+   git tag -a v2.1.14 -m "Version 2.1.14 - RGX Mods transformation"
+   git push origin v2.1.14
+   ```
 
 ## Key Principles:
 - Maintain addon's core functionality while enhancing architecture
@@ -303,6 +434,8 @@ git push origin v2.1.14
 - [ ] .pkgmeta packaging works
 - [ ] GitHub Actions workflow triggers
 - [ ] All metadata fields populated
+- [ ] Automated release creation works
+- [ ] CurseForge/Wago/WoWI packaging succeeds
 
 ## Critical Updates for v2.1.14:
 
@@ -311,6 +444,28 @@ git push origin v2.1.14
 3. **Packaging Configuration**: .pkgmeta must handle multi-folder structure and changelog
 4. **Professional Structure**: LICENSE, .gitignore, and GitHub workflows are required
 5. **PNG Logo**: Use PNG format for GitHub compatibility, not TGA
+
+## Release Automation:
+
+The GitHub Actions workflow provides two methods for creating releases:
+
+1. **Manual Workflow Dispatch** (Recommended):
+   - Navigate to Actions tab → "Package and Release"
+   - Click "Run workflow"
+   - Enter version number (without 'v' prefix)
+   - Select release type (release/beta/alpha)
+   - Workflow will create tag, package addon, and create GitHub release
+
+2. **Tag Push** (Traditional):
+   - Create and push a tag manually
+   - Workflow triggers automatically on tag push
+   - Release type determined by tag name (beta/alpha keywords)
+
+Both methods will:
+- Package addon for CurseForge, Wago, and WoWInterface
+- Create GitHub release with changelog from docs/CHANGES.md
+- Upload packaged .zip files to release
+- Mark beta/alpha releases as pre-release
 
 ## Example Multi-Version Interface Lines:
 - Retail: `## Interface: 110105, 110002, 110000, 100207, 100206, 100205, 100200, 100107, 100105, 100100, 100002, 100000`

@@ -1,5 +1,22 @@
 # FFLU Changelog
 
+## v2.1.15 - Enhanced Release Automation
+
+### Added
+- **Automated Release Workflow**: GitHub Actions now supports manual dispatch for creating releases
+- **Volume Channel Command**: New `/fflu volume <channel>` command to set audio output channel
+- **Workflow Documentation**: Complete transformation guide includes release automation
+
+### Enhanced
+- **Release Process**: Workflow creates tags, packages addon, and publishes GitHub releases automatically
+- **Command System**: Added volume channel switching between Master, SFX, Music, and Ambience
+- **Localization**: Added missing volume-related strings for all supported languages
+
+### Technical Improvements
+- **CI/CD Pipeline**: Complete automation from version bump to release publication
+- **Error Handling**: Improved volume channel validation and error messages
+- **Documentation**: Updated transformation prompt with full automation details
+
 ## v2.1.14 - Complete Multi-Version Support & Russian Localization
 
 ### Added
