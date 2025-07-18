@@ -1,26 +1,33 @@
 --=====================================================================================
 -- FFLU | Final Fantasy Level-Up! - locales.lua
--- Localization strings for different languages
+-- Version: 2.1.13
+-- Author: DonnieDice
+-- Description: Multi-language localization system for FFLU
 --=====================================================================================
 
--- Global FFLU namespace for localization
-FFLU = FFLU or {}
+-- Initialize localization table
+FFLU.L = FFLU.L or {}
 
--- Default English strings
-FFLU.L = {
-    -- Welcome messages
-    ["ADDON_LOADED"] = "Loaded!",
-    ["ENABLED_STATUS"] = "Enabled",
-    ["DISABLED_STATUS"] = "Disabled", 
-    ["TYPE_HELP"] = "Type |cffffffff/fflu help|r for commands",
-    
-    -- Command responses
+-- Get current WoW client locale
+local locale = GetLocale()
+
+-- Default English strings (always loaded as fallback)
+local L = {
+    -- Status Messages
     ["ADDON_ENABLED"] = "Addon |cff00ff00enabled|r",
     ["ADDON_DISABLED"] = "Addon |cffff0000disabled|r",
     ["PLAYING_TEST"] = "Playing test sound...",
     ["SOUND_VARIANT_SET"] = "Sound variant set to: |cffffffff%s|r",
+    ["WELCOME_MESSAGE"] = "Welcome to FFLU! Type |cffffffff/fflu help|r for commands",
     
-    -- Help system
+    -- Error Messages
+    ["ERROR_PREFIX"] = "|cffff0000FFLU Error:|r",
+    ["ERROR_INVALID_VARIANT_OPTIONS"] = "Invalid sound variant. Use: high, medium, or low",
+    ["ERROR_UNKNOWN_COMMAND"] = "Unknown command. Type |cffffffff/fflu help|r for available commands",
+    ["ERROR_SOUND_FAILED"] = "Failed to play sound file",
+    ["ERROR_INVALID_SOUND_VARIANT"] = "Invalid sound variant",
+    
+    -- Help System
     ["HELP_HEADER"] = "|cffffe568=== FFLU Commands ===|r",
     ["HELP_HELP"] = "|cffffffff/fflu help|r - Show this help",
     ["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Enable the addon",
@@ -29,97 +36,210 @@ FFLU.L = {
     ["HELP_TEST"] = "|cffffffff/fflu test|r - Play test sound",
     ["HELP_STATUS"] = "|cffffffff/fflu status|r - Show current settings",
     ["HELP_SOUND"] = "|cffffffff/fflu sound <variant>|r - Set sound (high/medium/low)",
+    ["HELP_RESET"] = "|cffffffff/fflu reset|r - Reset all settings to defaults",
     
-    -- Status display
+    -- Status Display
     ["STATUS_HEADER"] = "|cffffe568=== FFLU Status ===|r",
     ["STATUS_STATUS"] = "Status:",
     ["STATUS_SOUND"] = "Sound Variant: |cffffffff%s|r",
     ["STATUS_MUTE"] = "Mute Default:",
     ["STATUS_VERSION"] = "Version: |cffffffff%s|r",
+    ["STATUS_VOLUME"] = "Volume Channel: |cffffffff%s|r",
+    
+    -- General Status
+    ["ENABLED_STATUS"] = "|cff00ff00Enabled|r",
+    ["DISABLED_STATUS"] = "|cffff0000Disabled|r",
     ["YES"] = "|cff00ff00Yes|r",
     ["NO"] = "|cffff0000No|r",
+    ["TYPE_HELP"] = "Type |cffffffff/fflu help|r for commands",
     
-    -- Error messages
-    ["ERROR_PREFIX"] = "|cffff0000FFLU Error:|r",
-    ["ERROR_SOUND_FAILED"] = "Failed to play sound file: %s",
-    ["ERROR_INVALID_VARIANT"] = "Invalid sound variant: %s",
-    ["ERROR_INVALID_VARIANT_OPTIONS"] = "Invalid sound variant. Use: high, medium, or low",
-    ["ERROR_UNKNOWN_COMMAND"] = "Unknown command. Type |cffffffff/fflu help|r for available commands",
+    -- Sound Variants
+    ["SOUND_HIGH"] = "High",
+    ["SOUND_MEDIUM"] = "Medium", 
+    ["SOUND_LOW"] = "Low",
+    
+    -- RGX Mods Branding
+    ["RGX_MODS_PREFIX"] = "|cffffe568RGX Mods|r",
+    ["COMMUNITY_MESSAGE"] = "Part of the RealmGX Community - join us at discord.gg/N7kdKAHVVF"
 }
 
 -- Russian localization ZamestoTV
-if GetLocale() == "ruRU" then
-    FFLU.L["ADDON_LOADED"] = "Загружен!"
-    FFLU.L["ENABLED_STATUS"] = "Включён"
-    FFLU.L["DISABLED_STATUS"] = "Отключён"
-    FFLU.L["TYPE_HELP"] = "Введите |cffffffff/fflu help|r для команд"
-    FFLU.L["ADDON_ENABLED"] = "Аддон |cff00ff00включён|r"
-    FFLU.L["ADDON_DISABLED"] = "Аддон |cffff0000отключён|r"
-    FFLU.L["PLAYING_TEST"] = "Воспроизведение тестового звука..."
-    FFLU.L["SOUND_VARIANT_SET"] = "Вариант звука установлен на: |cffffffff%s|r"
-    FFLU.L["HELP_HEADER"] = "|cffffe568=== Команды FFLU ===|r"
-    FFLU.L["HELP_HELP"] = "|cffffffff/fflu help|r - Показать эту справку"
-    FFLU.L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Включить аддон"
-    FFLU.L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Отключить аддон"
-    FFLU.L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Переключить аддон вкл/выкл"
-    FFLU.L["HELP_TEST"] = "|cffffffff/fflu test|r - Воспроизвести тестовый звук"
-    FFLU.L["HELP_STATUS"] = "|cffffffff/fflu status|r - Показать текущие настройки"
-    FFLU.L["HELP_SOUND"] = "|cffffffff/fflu sound <variant>|r - Установить звук (высокий/средний/низкий)"
-    FFLU.L["STATUS_HEADER"] = "|cffffe568=== Статус FFLU ===|r"
-    FFLU.L["STATUS_STATUS"] = "Статус:"
-    FFLU.L["STATUS_SOUND"] = "Вариант звука: |cffffffff%s|r"
-    FFLU.L["STATUS_MUTE"] = "Отключить звук по умолчанию:"
-    FFLU.L["STATUS_VERSION"] = "Версия: |cffffffff%s|r"
-    FFLU.L["YES"] = "|cff00ff00Да|r"
-    FFLU.L["NO"] = "|cffff0000Нет|r"
-    FFLU.L["ERROR_PREFIX"] = "|cffff0000Ошибка FFLU:|r"
-    FFLU.L["ERROR_SOUND_FAILED"] = "Не удалось воспроизвести звуковой файл: %s"
-    FFLU.L["ERROR_INVALID_VARIANT"] = "Недопустимый вариант звука: %s"
-    FFLU.L["ERROR_INVALID_VARIANT_OPTIONS"] = "Недопустимый вариант звука. Используйте: высокий, средний или низкий"
-    FFLU.L["ERROR_UNKNOWN_COMMAND"] = "Неизвестная команда. Введите |cffffffff/fflu help|r для доступных команд"
+if locale == "ruRU" then
+    L["ADDON_ENABLED"] = "Аддон |cff00ff00включен|r"
+    L["ADDON_DISABLED"] = "Аддон |cffff0000отключен|r"
+    L["PLAYING_TEST"] = "Воспроизведение тестового звука..."
+    L["SOUND_VARIANT_SET"] = "Вариант звука установлен на: |cffffffff%s|r"
+    L["WELCOME_MESSAGE"] = "Добро пожаловать в FFLU! Введите |cffffffff/fflu help|r для команд"
+    L["ERROR_PREFIX"] = "|cffff0000Ошибка FFLU:|r"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Недопустимый вариант звука. Используйте: high, medium или low"
+    L["ERROR_UNKNOWN_COMMAND"] = "Неизвестная команда. Введите |cffffffff/fflu help|r для доступных команд"
+    L["ERROR_SOUND_FAILED"] = "Не удалось воспроизвести звуковой файл"
+    L["ERROR_INVALID_SOUND_VARIANT"] = "Недопустимый вариант звука"
+    L["HELP_HEADER"] = "|cffffe568=== Команды FFLU ===|r"
+    L["HELP_HELP"] = "|cffffffff/fflu help|r - Показать эту помощь"
+    L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Включить аддон"
+    L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Отключить аддон"
+    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Переключить аддон вкл/выкл"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Воспроизвести тестовый звук"
+    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Показать текущие настройки"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <вариант>|r - Установить звук (high/medium/low)"
+    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Сбросить все настройки на стандартные"
+    L["STATUS_HEADER"] = "|cffffe568=== Статус FFLU ===|r"
+    L["STATUS_STATUS"] = "Статус:"
+    L["STATUS_SOUND"] = "Вариант звука: |cffffffff%s|r"
+    L["STATUS_MUTE"] = "Отключение звука по умолчанию:"
+    L["STATUS_VERSION"] = "Версия: |cffffffff%s|r"
+    L["STATUS_VOLUME"] = "Канал громкости: |cffffffff%s|r"
+    L["ENABLED_STATUS"] = "|cff00ff00Включен|r"
+    L["DISABLED_STATUS"] = "|cffff0000Отключен|r"
+    L["YES"] = "|cff00ff00Да|r"
+    L["NO"] = "|cffff0000Нет|r"
+    L["TYPE_HELP"] = "Введите |cffffffff/fflu help|r для команд"
+    L["SOUND_HIGH"] = "Высокий"
+    L["SOUND_MEDIUM"] = "Средний"
+    L["SOUND_LOW"] = "Низкий"
+    L["COMMUNITY_MESSAGE"] = "Часть сообщества RealmGX - присоединяйтесь к нам на discord.gg/N7kdKAHVVF"
 end
 
 -- German localization
-if GetLocale() == "deDE" then
-    FFLU.L["ADDON_LOADED"] = "Geladen!"
-    FFLU.L["ENABLED_STATUS"] = "Aktiviert"
-    FFLU.L["DISABLED_STATUS"] = "Deaktiviert"
-    FFLU.L["TYPE_HELP"] = "Geben Sie |cffffffff/fflu help|r für Befehle ein"
-    FFLU.L["ADDON_ENABLED"] = "Addon |cff00ff00aktiviert|r"
-    FFLU.L["ADDON_DISABLED"] = "Addon |cffff0000deaktiviert|r"
-    FFLU.L["PLAYING_TEST"] = "Spiele Testsound..."
-    FFLU.L["HELP_HEADER"] = "|cffffe568=== FFLU Befehle ===|r"
-    FFLU.L["STATUS_HEADER"] = "|cffffe568=== FFLU Status ===|r"
-    FFLU.L["YES"] = "|cff00ff00Ja|r"
-    FFLU.L["NO"] = "|cffff0000Nein|r"
-end
+if locale == "deDE" then
+    L["ADDON_ENABLED"] = "Addon |cff00ff00aktiviert|r"
+    L["ADDON_DISABLED"] = "Addon |cffff0000deaktiviert|r"
+    L["PLAYING_TEST"] = "Testsound wird abgespielt..."
+    L["SOUND_VARIANT_SET"] = "Sound-Variante gesetzt auf: |cffffffff%s|r"
+    L["WELCOME_MESSAGE"] = "Willkommen bei FFLU! Tippe |cffffffff/fflu help|r für Befehle"
+    
+    L["ERROR_PREFIX"] = "|cffff0000FFLU Fehler:|r"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Ungültige Sound-Variante. Verwende: high, medium oder low"
+    L["ERROR_UNKNOWN_COMMAND"] = "Unbekannter Befehl. Tippe |cffffffff/fflu help|r für verfügbare Befehle"
+    L["ERROR_SOUND_FAILED"] = "Fehler beim Abspielen der Sounddatei"
+    L["ERROR_INVALID_SOUND_VARIANT"] = "Ungültige Sound-Variante"
+    
+    L["HELP_HEADER"] = "|cffffe568=== FFLU Befehle ===|r"
+    L["HELP_HELP"] = "|cffffffff/fflu help|r - Diese Hilfe anzeigen"
+    L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Addon aktivieren"
+    L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Addon deaktivieren"
+    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Addon ein/aus schalten"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Testsound abspielen"
+    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Aktuelle Einstellungen anzeigen"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Sound setzen (high/medium/low)"
+    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Alle Einstellungen zurücksetzen"
+    
+    L["STATUS_HEADER"] = "|cffffe568=== FFLU Status ===|r"
+    L["STATUS_STATUS"] = "Status:"
+    L["STATUS_SOUND"] = "Sound-Variante: |cffffffff%s|r"
+    L["STATUS_MUTE"] = "Standard stumm:"
+    L["STATUS_VERSION"] = "Version: |cffffffff%s|r"
+    L["STATUS_VOLUME"] = "Lautstärke-Kanal: |cffffffff%s|r"
+    
+    L["ENABLED_STATUS"] = "|cff00ff00Aktiviert|r"
+    L["DISABLED_STATUS"] = "|cffff0000Deaktiviert|r"
+    L["YES"] = "|cff00ff00Ja|r"
+    L["NO"] = "|cffff0000Nein|r"
+    L["TYPE_HELP"] = "Tippe |cffffffff/fflu help|r für Befehle"
+    
+    L["SOUND_HIGH"] = "Hoch"
+    L["SOUND_MEDIUM"] = "Mittel"
+    L["SOUND_LOW"] = "Niedrig"
+    
+    L["COMMUNITY_MESSAGE"] = "Teil der RealmGX Community - tritt uns bei: discord.gg/N7kdKAHVVF"
 
 -- French localization
-if GetLocale() == "frFR" then
-    FFLU.L["ADDON_LOADED"] = "Chargé!"
-    FFLU.L["ENABLED_STATUS"] = "Activé"
-    FFLU.L["DISABLED_STATUS"] = "Désactivé"
-    FFLU.L["TYPE_HELP"] = "Tapez |cffffffff/fflu help|r pour les commandes"
-    FFLU.L["ADDON_ENABLED"] = "Addon |cff00ff00activé|r"
-    FFLU.L["ADDON_DISABLED"] = "Addon |cffff0000désactivé|r"
-    FFLU.L["PLAYING_TEST"] = "Lecture du son de test..."
-    FFLU.L["HELP_HEADER"] = "|cffffe568=== Commandes FFLU ===|r"
-    FFLU.L["STATUS_HEADER"] = "|cffffe568=== Statut FFLU ===|r"
-    FFLU.L["YES"] = "|cff00ff00Oui|r"
-    FFLU.L["NO"] = "|cffff0000Non|r"
-end
+elseif locale == "frFR" then
+    L["ADDON_ENABLED"] = "Addon |cff00ff00activé|r"
+    L["ADDON_DISABLED"] = "Addon |cffff0000désactivé|r"
+    L["PLAYING_TEST"] = "Lecture du son de test..."
+    L["SOUND_VARIANT_SET"] = "Variante sonore définie sur : |cffffffff%s|r"
+    L["WELCOME_MESSAGE"] = "Bienvenue dans FFLU ! Tapez |cffffffff/fflu help|r pour les commandes"
+    
+    L["ERROR_PREFIX"] = "|cffff0000Erreur FFLU:|r"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Variante sonore invalide. Utilisez : high, medium ou low"
+    L["ERROR_UNKNOWN_COMMAND"] = "Commande inconnue. Tapez |cffffffff/fflu help|r pour les commandes disponibles"
+    L["ERROR_SOUND_FAILED"] = "Échec de la lecture du fichier sonore"
+    L["ERROR_INVALID_SOUND_VARIANT"] = "Variante sonore invalide"
+    
+    L["HELP_HEADER"] = "|cffffe568=== Commandes FFLU ===|r"
+    L["HELP_HELP"] = "|cffffffff/fflu help|r - Afficher cette aide"
+    L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Activer l'addon"
+    L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Désactiver l'addon"
+    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Basculer l'addon on/off"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Jouer le son de test"
+    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Afficher les paramètres actuels"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Définir le son (high/medium/low)"
+    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Réinitialiser tous les paramètres"
+    
+    L["STATUS_HEADER"] = "|cffffe568=== Statut FFLU ===|r"
+    L["STATUS_STATUS"] = "Statut :"
+    L["STATUS_SOUND"] = "Variante sonore : |cffffffff%s|r"
+    L["STATUS_MUTE"] = "Muet par défaut :"
+    L["STATUS_VERSION"] = "Version : |cffffffff%s|r"
+    L["STATUS_VOLUME"] = "Canal de volume : |cffffffff%s|r"
+    
+    L["ENABLED_STATUS"] = "|cff00ff00Activé|r"
+    L["DISABLED_STATUS"] = "|cffff0000Désactivé|r"
+    L["YES"] = "|cff00ff00Oui|r"
+    L["NO"] = "|cffff0000Non|r"
+    L["TYPE_HELP"] = "Tapez |cffffffff/fflu help|r pour les commandes"
+    
+    L["SOUND_HIGH"] = "Élevé"
+    L["SOUND_MEDIUM"] = "Moyen"
+    L["SOUND_LOW"] = "Bas"
+    
+    L["COMMUNITY_MESSAGE"] = "Partie de la communauté RealmGX - rejoignez-nous sur discord.gg/N7kdKAHVVF"
 
 -- Spanish localization
-if GetLocale() == "esES" or GetLocale() == "esMX" then
-    FFLU.L["ADDON_LOADED"] = "¡Cargado!"
-    FFLU.L["ENABLED_STATUS"] = "Habilitado"
-    FFLU.L["DISABLED_STATUS"] = "Deshabilitado"
-    FFLU.L["TYPE_HELP"] = "Escriba |cffffffff/fflu help|r para comandos"
-    FFLU.L["ADDON_ENABLED"] = "Addon |cff00ff00habilitado|r"
-    FFLU.L["ADDON_DISABLED"] = "Addon |cffff0000deshabilitado|r"
-    FFLU.L["PLAYING_TEST"] = "Reproduciendo sonido de prueba..."
-    FFLU.L["HELP_HEADER"] = "|cffffe568=== Comandos FFLU ===|r"
-    FFLU.L["STATUS_HEADER"] = "|cffffe568=== Estado FFLU ===|r"
-    FFLU.L["YES"] = "|cff00ff00Sí|r"
-    FFLU.L["NO"] = "|cffff0000No|r"
+elseif locale == "esES" or locale == "esMX" then
+    L["ADDON_ENABLED"] = "Addon |cff00ff00habilitado|r"
+    L["ADDON_DISABLED"] = "Addon |cffff0000deshabilitado|r"
+    L["PLAYING_TEST"] = "Reproduciendo sonido de prueba..."
+    L["SOUND_VARIANT_SET"] = "Variante de sonido establecida en: |cffffffff%s|r"
+    L["WELCOME_MESSAGE"] = "¡Bienvenido a FFLU! Escribe |cffffffff/fflu help|r para comandos"
+    
+    L["ERROR_PREFIX"] = "|cffff0000Error FFLU:|r"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Variante de sonido inválida. Usa: high, medium o low"
+    L["ERROR_UNKNOWN_COMMAND"] = "Comando desconocido. Escribe |cffffffff/fflu help|r para comandos disponibles"
+    L["ERROR_SOUND_FAILED"] = "Error al reproducir archivo de sonido"
+    L["ERROR_INVALID_SOUND_VARIANT"] = "Variante de sonido inválida"
+    
+    L["HELP_HEADER"] = "|cffffe568=== Comandos FFLU ===|r"
+    L["HELP_HELP"] = "|cffffffff/fflu help|r - Mostrar esta ayuda"
+    L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Habilitar el addon"
+    L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Deshabilitar el addon"
+    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Alternar addon on/off"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Reproducir sonido de prueba"
+    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Mostrar configuración actual"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Establecer sonido (high/medium/low)"
+    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Restablecer toda la configuración"
+    
+    L["STATUS_HEADER"] = "|cffffe568=== Estado FFLU ===|r"
+    L["STATUS_STATUS"] = "Estado:"
+    L["STATUS_SOUND"] = "Variante de sonido: |cffffffff%s|r"
+    L["STATUS_MUTE"] = "Silenciar por defecto:"
+    L["STATUS_VERSION"] = "Versión: |cffffffff%s|r"
+    L["STATUS_VOLUME"] = "Canal de volumen: |cffffffff%s|r"
+    
+    L["ENABLED_STATUS"] = "|cff00ff00Habilitado|r"
+    L["DISABLED_STATUS"] = "|cffff0000Deshabilitado|r"
+    L["YES"] = "|cff00ff00Sí|r"
+    L["NO"] = "|cffff0000No|r"
+    L["TYPE_HELP"] = "Escribe |cffffffff/fflu help|r para comandos"
+    
+    L["SOUND_HIGH"] = "Alto"
+    L["SOUND_MEDIUM"] = "Medio"
+    L["SOUND_LOW"] = "Bajo"
+    
+    L["COMMUNITY_MESSAGE"] = "Parte de la comunidad RealmGX - únete a nosotros en discord.gg/N7kdKAHVVF"
+end
+
+-- Assign localization table to global addon namespace
+FFLU.L = L
+
+-- Provide fallback function for missing translations
+function FFLU:GetLocalizedString(key)
+    if self.L and self.L[key] then
+        return self.L[key]
+    end
+    
+    -- Return the key itself if no translation found (for debugging)
+    return key
 end
