@@ -1,6 +1,6 @@
 --=====================================================================================
 -- FFLU | Final Fantasy Level-Up! - locales.lua
--- Version: 2.1.16
+-- Version: 2.1.17
 -- Author: DonnieDice
 -- Description: Multi-language localization system for FFLU
 --=====================================================================================
@@ -68,7 +68,7 @@ local L = {
     ["COMMUNITY_MESSAGE"] = "Part of the RealmGX Community - join us at discord.gg/N7kdKAHVVF"
 }
 
--- Russian localization by ZamestoTV
+-- Russian localization by ZamestoTV (Hubbotu)
 if locale == "ruRU" then
     L["ADDON_ENABLED"] = "Аддон |cff00ff00включен|r"
     L["ADDON_DISABLED"] = "Аддон |cffff0000отключен|r"

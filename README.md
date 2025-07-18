@@ -157,7 +157,7 @@ FFLU automatically detects your WoW client language:
 - **Deutsch** (German)
 - **Français** (French)
 - **Español** (Spanish)
-- **Русский** (Russian) - *New!* by ZamestoTV
+- **Русский** (Russian) - *New!* by ZamestoTV (Hubbotu)
 
 ## 🎮 Compatibility
 
@@ -197,10 +197,10 @@ FFLU automatically detects your WoW client language:
 <summary><strong>v2.1.14 - Russian Localization Addition</strong></summary>
 
 ### v2.1.14 - Russian Localization Addition
-- **Added**: Complete Russian (ruRU) language support by ZamestoTV
+- **Added**: Complete Russian (ruRU) language support by ZamestoTV (Hubbotu)
 - **Added**: Fifth language support for global accessibility
 - **Enhanced**: Multi-language system with Russian localization
-- **Thanks**: ZamestoTV for Russian translations, Hubbotu for pull request
+- **Thanks**: ZamestoTV (Hubbotu) for Russian translations and pull request submission
 
 ### v2.1.13 - Major RGX Mods Transformation
 - **Added**: Complete slash command system with `/fflu` interface

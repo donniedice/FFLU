@@ -1,5 +1,5 @@
 ## Interface: 110105
-## Version: 2.1.16
+## Version: 2.1.17
 ## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r
 ## Notes: Enhanced Final Fantasy level-up sound with slash commands, settings, and multi-language support.|n|r|cff1f1d1eBy DonnieDice|r
 ## Author: DonnieDice

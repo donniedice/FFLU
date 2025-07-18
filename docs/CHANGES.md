@@ -1,5 +1,25 @@
 # FFLU Changelog
 
+## v2.1.17 - Documentation Updates & Folder Standardization
+
+### Changed
+- **Folder Structure**: Renamed `Images` folder to lowercase `images` for consistency
+- **Attribution**: Clarified that ZamestoTV and Hubbotu are the same contributor
+- **Documentation**: Updated transformation prompt to v2.1.17 standard
+- **GitIgnore**: Enhanced to exclude Claude artifacts and transformation prompt
+
+### Technical Improvements
+- **Cross-Platform**: Lowercase folder naming ensures compatibility across all platforms
+- **Clean Repository**: Development artifacts now properly excluded from version control
+- **Accurate Credits**: Proper attribution for Russian localization contributor
+- **Updated Guide**: Transformation prompt reflects latest best practices
+
+### Developer Notes
+- All IconTexture paths updated from `Images/icon` to `images/icon`
+- README logo path updated to lowercase `images` folder
+- CLAUDE.md project structure documentation updated
+- No functional changes to addon behavior
+
 ## v2.1.16 - CurseForge Compatibility Fix
 
 ### Fixed
@@ -34,7 +54,7 @@ This hotfix ensures reliable uploads to all distribution platforms including Cur
 ## v2.1.14 - Complete Multi-Version Support & Russian Localization
 
 ### Added
-- **Russian Localization**: Complete Russian (ruRU) language support by ZamestoTV
+- **Russian Localization**: Complete Russian (ruRU) language support by ZamestoTV (Hubbotu)
 - **Universal WoW Support**: TOC files for all WoW versions (BCC, WotLK)
 - **Multi-Version Compatibility**: Each TOC supports multiple interface versions for backward compatibility
 - **GitHub Logo**: PNG version for proper README display
@@ -53,8 +73,7 @@ This hotfix ensures reliable uploads to all distribution platforms including Cur
 - **Professional Structure**: Complete addon infrastructure for long-term maintenance
 
 ### Contributors
-- **ZamestoTV**: Russian localization translations
-- **Hubbotu**: Pull request submission and contribution facilitation
+- **ZamestoTV (Hubbotu)**: Russian localization translations and pull request submission
 
 This release completes FFLU's transformation into a fully professional, multi-version addon supporting all WoW clients with comprehensive localization.
 

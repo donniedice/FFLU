@@ -1,12 +1,40 @@
+v2.1.17-------------------------------------------------------------------
+- Changed - Images folder renamed to lowercase 'images' for consistency [All TOC files, README.md, CLAUDE.md]
+- Changed - Attribution clarified for ZamestoTV (Hubbotu) as single contributor [locales.lua, CHANGES.md, README.md]
+- Updated - Transformation prompt to v2.1.17 standard with latest best practices [addon_transformation_prompt.md]
+- Updated - GitIgnore to exclude Claude artifacts and transformation prompt [.gitignore]
+- Technical - All IconTexture paths updated from Images/icon to images/icon [All TOC files]
+- Technical - README logo path updated to lowercase images folder [README.md]
+- Technical - CLAUDE.md project structure documentation updated [CLAUDE.md]
+- Technical - No functional changes to addon behavior
+
+v2.1.16-------------------------------------------------------------------
+- Fixed - CurseForge 500 errors by limiting to single interface version per TOC [All TOC files]
+- Fixed - Multi-version support simplified for better compatibility [All TOC files]
+- Fixed - Release workflow improved for stability [.github/workflows/release.yml]
+- Technical - Each TOC file now declares only latest interface version [All TOC files]
+- Technical - Reduced payload size for CurseForge API calls [All TOC files]
+- Technical - Streamlined version declarations prevent server timeouts [All TOC files]
+
+v2.1.15-------------------------------------------------------------------
+- Added - Automated release workflow with manual dispatch [.github/workflows/release.yml]
+- Added - Volume channel command: /fflu volume <channel> [core.lua]
+- Added - Workflow documentation in transformation guide [addon_transformation_prompt.md]
+- Enhanced - Release process with automatic tag creation and GitHub releases [.github/workflows/release.yml]
+- Enhanced - Command system with volume channel switching [core.lua]
+- Enhanced - Localization with volume-related strings [locales.lua]
+- Technical - Complete CI/CD pipeline from version bump to release [.github/workflows/release.yml]
+- Technical - Improved volume channel validation and error messages [core.lua]
+
 v2.1.14-------------------------------------------------------------------
-- Added - Russian localization (ruRU) by ZamestoTV [locales.lua]
+- Added - Russian localization (ruRU) by ZamestoTV (Hubbotu) [locales.lua]
 - Added - Fifth language support for FFLU (English, German, French, Spanish, Russian) [locales.lua]
 - Added - Community contribution integration with proper attribution [locales.lua]
 - Enhanced - Multi-language support system with Russian language [locales.lua]
 - Enhanced - RGX Mods branding consistency in Russian translations [locales.lua]
 - Enhanced - Global accessibility for Russian-speaking WoW players [locales.lua]
 - Updated - Version to 2.1.14 across all files [All TOC files, core.lua]
-- Thanks - ZamestoTV for Russian translations and Hubbotu for pull request
+- Thanks - ZamestoTV (Hubbotu) for Russian translations and pull request submission
 
 v2.1.13-------------------------------------------------------------------
 - Added - Complete slash command system with /fflu interface [core.lua]
