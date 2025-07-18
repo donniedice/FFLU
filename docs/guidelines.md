@@ -8,7 +8,7 @@ This document outlines the standards for maintaining a consistent and clear chan
 ## Versioning Standards
 
 **Version Numbering:**  
-Each version number should follow the format `vX.Y.Z`, where:
+Each version number should follow the format `vX.Y.Z` (without the 'v' prefix in changelog entries), where:
 
 - **X (Major):** Incremented for significant changes or complete overhauls, typically including backward-incompatible changes.
 - **Y (Minor):** Incremented for new features, updates, or changes that are backward-compatible.
@@ -58,16 +58,17 @@ When introducing new files or directories, clearly indicate the full path relati
   - Added - New configuration file [config/settings.lua] - [/data/config/]
   - This indicates that `settings.lua` was added under the `data/config` directory.
 
-### ToC Update Lines
+### TOC Update Lines
 
-ToC (Table of Contents) updates should include the following details:
-- **Patch Name:** The name of the World of Warcraft patch (e.g., "Season of Discovery").
-- **Build Number:** The build number associated with the patch (e.g., `1.15.3.55646`).
-- **WoW Interface ToC Build Number:** The corresponding interface build number for WoW (e.g., `[ToC.11503]`).
+TOC (Table of Contents) updates should include the following details:
+- **Version Changes:** Clear indication of version number updates
+- **Multi-Version Support:** When updating multiple TOC files simultaneously
+- **Interface Numbers:** Reference to WoW interface versions when relevant
 
-- **Example:**
-  - Updated - ToC for _classic_era_ - Season of Discovery Phase 4 (1.15.3.55646) [ToC.11503]
-  - This indicates that the ToC was updated for the "Season of Discovery Phase 4" patch with build number `1.15.3.55646` and the WoW interface ToC build number `11503`.
+- **Examples:**
+  - Updated - TOC files to v2.1.12 with enhanced descriptions [All TOC files]
+  - Added - Mists of Pandaria support [FFLU_Mists.toc]
+  - Updated - Email address to donniedice@protonmail.com [All TOC files]
 
 ---
 
@@ -98,11 +99,18 @@ vX.Y.Z-------------------------------------------------------------------
 ## Example Structure
 
 ```
-v4.6.0-------------------------------------------------------------------
-- Restructured - Shared event handlers in [core.lua] for better maintainability
-- Renamed - [utils.lua] to [core.lua]
-- Updated - .toc files to reflect new structure
-- Added - More comprehensive debug logging
+v2.1.12-------------------------------------------------------------------
+- Added - Complete slash command system with /fflu interface [core.lua]
+- Added - Persistent settings via SavedVariables system [FFLUSettings]
+- Added - Multi-language support for English, German, French, Spanish [locales.lua]
+- Added - Sound variant selection (high/medium/low quality) [core.lua]
+- Added - Professional error handling with pcall protection [core.lua]
+- Added - Mists of Pandaria support [FFLU_Mists.toc]
+- Updated - Code architecture with object-oriented design [core.lua]
+- Updated - Email address to donniedice@protonmail.com [All TOC files]
+- Enhanced - Sound management with better error handling [core.lua]
+- Restructured - Global namespace management for better organization [core.lua]
+- Removed - Redundant help message from welcome display [core.lua]
 ```
 
 ---
