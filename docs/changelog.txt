@@ -1,4 +1,22 @@
-v2.1.11------------------------------------------------------------------
+v2.1.13-------------------------------------------------------------------
+- Added - Complete slash command system with /fflu interface [core.lua]
+- Added - Persistent settings via SavedVariables system [FFLUSettings]
+- Added - Multi-language support for English, German, French, Spanish [locales.lua]
+- Added - Professional error handling with pcall protection [core.lua]
+- Added - RGX Mods branding and RealmGX community integration [README.md]
+- Added - Professional GitHub badges and statistics [README.md]
+- Added - Reset command to restore default settings [core.lua]
+- Added - Enhanced welcome message with community integration [core.lua]
+- Added - Advanced localization system with comprehensive fallbacks [locales.lua]
+- Updated - Code architecture with object-oriented design [core.lua]
+- Updated - README structure with professional RGX Mods layout [README.md]
+- Updated - All TOC files with enhanced descriptions and v2.1.13 [All TOC files]
+- Updated - Version management across all files [All files]
+- Enhanced - User experience with consistent RGX Mods branding [core.lua]
+- Enhanced - Community integration with Discord touchpoints [README.md, core.lua]
+- Enhanced - Settings management with improved validation [core.lua]
+- Enhanced - Localization system with professional architecture [locales.lua]
+
 v2.1.12-------------------------------------------------------------------
 - Added - Complete slash command system with /fflu interface [core.lua]
 - Added - Persistent settings via SavedVariables system [FFLUSettings]

@@ -1,5 +1,38 @@
 # FFLU Changelog
 
+## v2.1.13 - Major RGX Mods Transformation
+
+### Added
+- **Complete Slash Command System**: Enhanced `/fflu` interface with additional commands
+- **Persistent Settings via SavedVariables**: FFLUSettings system with type validation
+- **Multi-Language Support**: English, German, French, Spanish localization system
+- **Professional Error Handling**: pcall protection on all major functions
+- **RGX Mods Branding**: RealmGX community integration throughout
+- **Professional GitHub Badges**: Comprehensive statistics and community links
+- **Reset Command**: `/fflu reset` to restore default settings
+- **Enhanced Welcome Message**: Community integration with first-run detection
+- **Advanced Localization**: Comprehensive translation system with fallbacks
+
+### Updated
+- **Code Architecture**: Object-oriented design with proper namespacing
+- **README Structure**: Professional RGX Mods layout with community focus
+- **All TOC Files**: Enhanced descriptions with RGX Mods branding (v2.1.13)
+- **Version Management**: Updated to v2.1.13 across all files
+
+### Enhanced
+- **User Experience**: Consistent RGX Mods branding throughout
+- **Community Integration**: Discord touchpoints and RealmGX messaging
+- **Settings Management**: Improved type validation and error handling
+- **Localization System**: Professional multi-language architecture
+
+### RGX Mods Integration
+- **Community Messaging**: Discord integration in welcome and help messages
+- **Professional Branding**: RGX Mods styling throughout the addon
+- **GitHub Statistics**: Comprehensive repository metrics and badges
+- **Support Integration**: Buy Me a Coffee and community support links
+
+This release transforms FFLU into a professional RGX Mods addon with extensive community integration and enhanced architecture.
+
 ## v2.1.12 - Professional Edition
 
 ### Added

@@ -1,15 +1,16 @@
 --=====================================================================================
 -- FFLU | Final Fantasy Level-Up! - core.lua
--- Version: 2.1.12
+-- Version: 2.1.13
 -- Author: DonnieDice
 -- Description: Professional World of Warcraft addon that plays Final Fantasy level-up sound
+-- RGX Mods Collection - RealmGX Community Project
 --=====================================================================================
 
 -- Global addon namespace and version info
 FFLU = FFLU or {}
 
 -- Constants (cached for performance)
-local ADDON_VERSION = "2.1.12"
+local ADDON_VERSION = "2.1.13"
 local ADDON_NAME = "FFLU"
 local ICON_PATH = "|Tinterface/addons/FFLU/images/icon:16:16|t"
 local SOUND_PATHS = {
@@ -31,7 +32,8 @@ FFLU.defaults = {
     soundVariant = "medium",
     muteDefault = true,
     showWelcome = true,
-    volume = "Master"
+    volume = "Master",
+    firstRun = true
 }
 
 -- Saved variables (will be initialized on addon load)
@@ -120,16 +122,26 @@ function FFLU:DisplayWelcomeMessage()
         self.L = {
             ENABLED_STATUS = "|cff00ff00Enabled|r",
             DISABLED_STATUS = "|cffff0000Disabled|r",
-            TYPE_HELP = "Type |cffffffff/fflu help|r for commands"
+            TYPE_HELP = "Type |cffffffff/fflu help|r for commands",
+            COMMUNITY_MESSAGE = "Part of the RealmGX Community - join us at discord.gg/N7kdKAHVVF"
         }
     end
     
     -- Cached strings for performance
     local title = "[|cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r]"
     local version = "|cff8080ff(v" .. ADDON_VERSION .. ")|r"
+    local rgxMods = "|cffffe568RGX Mods|r"
     local status = self:GetSetting("enabled") and self.L["ENABLED_STATUS"] or self.L["DISABLED_STATUS"]
     
-    print(ICON_PATH .. " - " .. title .. " " .. status .. " " .. version)
+    print(ICON_PATH .. " - " .. title .. " " .. status .. " " .. version .. " - " .. rgxMods)
+    
+    -- Show community message on first run
+    if self:GetSetting("firstRun") then
+        print(ICON_PATH .. " " .. self.L["COMMUNITY_MESSAGE"])
+        self:SetSetting("firstRun", false)
+    end
+    
+    print(ICON_PATH .. " " .. self.L["TYPE_HELP"])
 end
 
 -- Slash command handler
@@ -187,6 +199,8 @@ function FFLU:HandleSlashCommand(args)
         self:PlayCustomLevelUpSound()
     elseif command == "status" then
         self:ShowStatus()
+    elseif command == "reset" then
+        self:ResetSettings()
     elseif string.match(command, "^sound ") then
         local variant = string.match(command, "^sound (.+)")
         -- Validate against our constants table for better performance
@@ -212,6 +226,8 @@ function FFLU:ShowHelp()
     print(iconPrefix .. " " .. self.L["HELP_TEST"])
     print(iconPrefix .. " " .. self.L["HELP_STATUS"])
     print(iconPrefix .. " " .. self.L["HELP_SOUND"])
+    print(iconPrefix .. " " .. self.L["HELP_RESET"])
+    print(iconPrefix .. " " .. (self.L["COMMUNITY_MESSAGE"] or "Part of the RealmGX Community - join us at discord.gg/N7kdKAHVVF"))
 end
 
 -- Show current status
@@ -223,6 +239,18 @@ function FFLU:ShowStatus()
     print(iconPrefix .. " " .. string.format(self.L["STATUS_SOUND"], self:GetSetting("soundVariant")))
     print(iconPrefix .. " " .. self.L["STATUS_MUTE"] .. " " .. (self:GetSetting("muteDefault") and self.L["YES"] or self.L["NO"]))
     print(iconPrefix .. " " .. string.format(self.L["STATUS_VERSION"], ADDON_VERSION))
+    print(iconPrefix .. " " .. string.format(self.L["STATUS_VOLUME"] or "Volume Channel: |cffffffff%s|r", self:GetSetting("volume")))
+end
+
+-- Reset all settings to defaults
+function FFLU:ResetSettings()
+    local iconPrefix = ICON_PATH
+    for key, value in pairs(self.defaults) do
+        FFLUSettings[key] = value
+    end
+    -- Set first run back to true to show community message
+    self:SetSetting("firstRun", true)
+    print(iconPrefix .. " |cffffe568FFLU:|r Settings reset to defaults")
 end
 
 -- Event handler function (optimized with early returns)

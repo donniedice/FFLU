@@ -7,7 +7,17 @@
       "Bash(mkdir:*)",
       "Bash(xcopy:*)",
       "Bash(cp:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git tag:*)",
+      "Bash(git config:*)",
+      "Bash(gh auth:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(gh repo set-default:*)",
+      "Bash(gh repo sync:*)",
+      "Bash(gh api:*)",
+      "Bash(git rev-parse:*)"
     ],
     "deny": []
   }

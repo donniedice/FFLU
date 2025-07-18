@@ -1,7 +1,7 @@
 ## Interface: 11507
-## Version: 2.1.12
-## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r - |cff8080ff2.1.12|r 
-## Notes: Play the Final Fantasy level up sound! Now with customization options and slash commands.|n|r   |cffffe568By DonnieDice|r
+## Version: 2.1.13
+## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r - |cff8080ff2.1.13|r 
+## Notes: Enhanced Final Fantasy level-up sound with slash commands, settings, and multi-language support.|n|r|cff1f1d1eBy DonnieDice|r
 ## Author: DonnieDice
 ## Email: donniedice@protonmail.com
 ## IconTexture: Interface\AddOns\FFLU\Images\icon

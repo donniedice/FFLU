@@ -4,98 +4,63 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-FFLU (Final Fantasy Level-Up!) is a professional World of Warcraft addon that plays the iconic Final Fantasy level-up chime when players level up. The addon features comprehensive customization options, multi-language support, and enterprise-grade code quality while maintaining focus on its core functionality.
+FFLU (Final Fantasy Level-Up!) is a professional World of Warcraft addon that plays the iconic Final Fantasy level-up chime when players level up. As of v2.1.13, it features a professional architecture with slash commands, persistent settings, multi-language support, and extensive error handling as part of the RGX Mods collection.
 
-## File Structure
+## Project Structure
 
-- **TOC Files**: Four separate `.toc` files for different WoW versions:
-  - `FFLU.toc` - The War Within (Interface: 110105)
-  - `FFLU_Cata.toc` - Classic Cataclysm (Interface: 40402)  
-  - `FFLU_Vanilla.toc` - Classic WoW (Interface: 11507)
-  - `FFLU_Mists.toc` - Mists of Pandaria (Interface: 50500)
-- **Core Logic**: 
-  - `data/core.lua` - Main addon functionality with optimized architecture
-  - `data/locales.lua` - Multi-language localization strings
-- **Assets**: 
-  - `sounds/` - Three variants of Final Fantasy level-up sound (high, medium, low)
-  - `Images/icon.tga` - Addon icon displayed in all output
+- **data/core.lua**: Main addon functionality with advanced features
+- **data/locales.lua**: Multi-language support (English, German, French, Spanish)
+- **sounds/**: Three variants of Final Fantasy level-up sound (high, medium, low)
+- **Images/icon.tga**: Addon icon displayed in all output
+- **FFLU.toc**: TOC file for retail WoW (Interface: 110105)
+- **FFLU_Cata.toc**: TOC file for Classic Cataclysm (Interface: 40402)
+- **FFLU_Vanilla.toc**: TOC file for Classic WoW (Interface: 11507)
+- **FFLU_Mists.toc**: TOC file for Mists of Pandaria (Interface: 50500)
 
-## Development Commands
+## Commands
 
-This is a Lua addon with no build system. Development involves:
-- Direct editing of `.lua` files
-- Manual testing in WoW game client  
-- Version updates in all four TOC files + constants in `core.lua`
-- Testing slash commands and settings persistence
+Use `/fflu` followed by various commands for full functionality:
 
-## Code Architecture
+- `/fflu help` - Show all available commands
+- `/fflu enable/disable/toggle` - Control addon state
+- `/fflu test` - Play test sound
+- `/fflu status` - Show current settings
+- `/fflu sound <variant>` - Set sound quality (high/medium/low)
+- `/fflu reset` - Reset all settings to defaults
+
+## Settings Architecture
+
+**SavedVariables**: `FFLUSettings` automatically managed with fallback defaults
 
 The addon uses an optimized, professional architecture:
 
-1. **Constants Management**: Performance-optimized with cached local constants:
-   - `ADDON_VERSION`, `ADDON_NAME`, `ICON_PATH`, `SOUND_PATHS`, `DEFAULT_SOUND_ID`
-
+1. **Constants Management**: Performance-optimized with cached local constants
 2. **Global Namespace**: `FFLU` table with proper initialization and namespacing
+3. **Settings System**: Complete configuration management with type validation
+4. **Event System**: Optimized event handling with early returns
+5. **Slash Commands**: Complete `/fflu` interface with comprehensive validation
+6. **Error Handling**: Enterprise-grade protection with `pcall` protection
+7. **Localization**: Multi-language support with automatic locale detection
 
-3. **Settings System**: Complete configuration management:
-   - `FFLUSettings` SavedVariables for persistence
-   - Type validation and input sanitization  
-   - Default value fallbacks
+## RGX Mods Standards
 
-4. **Event System**: Optimized event handling with early returns:
-   - `PLAYER_LEVEL_UP` - Triggers custom sound
-   - `ADDON_LOADED` - Initializes settings and mutes default sound
-   - `PLAYER_LOGIN` - Shows welcome message
+This addon follows RGX Mods community standards with Discord integration and professional error handling.
 
-5. **Slash Commands**: Complete `/fflu` interface:
-   - Help system, enable/disable, sound selection, status display
-   - Input validation and error handling
+## Key Features
 
-6. **Error Handling**: Enterprise-grade protection:
-   - `pcall` protection for all user-facing functions
-   - Graceful error recovery and user-friendly messages
-
-7. **Localization**: Multi-language support with fallbacks:
-   - English, German, French, Spanish
-   - Automatic locale detection
-
-## Performance Optimizations
-
-- **String Caching**: Eliminated repeated string concatenations
-- **Constant Tables**: Local variables for frequently accessed values
-- **Early Returns**: Optimized control flow in event handlers
-- **Memory Efficiency**: Reduced garbage collection through smart caching
-- **Type Safety**: Comprehensive input validation
-
-## Version Management
-
-- Version centralized in `ADDON_VERSION` constant in `core.lua`
-- All four TOC files must be updated simultaneously
-- Version appears in welcome message and status display
-- Follow changelog standards in `docs/guidelines.md`
-
-## Testing Requirements
-
-- Load addon in WoW client across all supported versions
-- Test all slash commands (`/fflu help`, `/fflu status`, etc.)
-- Verify settings persistence across sessions
-- Test sound playback with different variants
-- Validate localization in different languages
-- Test error scenarios and edge cases
-
-## Key Considerations
-
-- **Multi-Version Support**: Four TOC files require synchronized updates
+- **Multi-Version Support**: Four TOC files for all WoW versions
 - **Settings Validation**: All user inputs are type-checked and validated
 - **Error Resilience**: Addon continues functioning even with errors
 - **Performance**: Optimized for minimal memory and CPU usage
 - **Maintainability**: Clean, documented code with clear separation of concerns
-- **User Experience**: Consistent branding with icons and professional messaging
+- **User Experience**: Consistent RGX Mods branding with icons and professional messaging
+- **Community Integration**: RealmGX Discord integration throughout the addon
 
-## Common Development Tasks
+## Development Notes
 
-- **Version Updates**: Update `ADDON_VERSION` constant and all TOC files
-- **Feature Addition**: Follow existing patterns for settings, validation, and commands
-- **Localization**: Add strings to `locales.lua` and update fallbacks in `core.lua`
-- **Testing**: Use `/fflu test` and manually level characters
-- **Debugging**: Error messages appear with FFLU icon prefix for easy identification
+- Version centralized in `ADDON_VERSION` constant in `core.lua`
+- All four TOC files must be updated simultaneously
+- Version appears in welcome message and status display
+- Settings persist automatically via SavedVariables
+- Multi-language support with automatic locale detection
+- Professional error handling with pcall protection
