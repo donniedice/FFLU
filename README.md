@@ -3,7 +3,9 @@
 
 <div align="center">
 
-![Logo](Images/icon.tga)
+<img src="https://raw.githubusercontent.com/donniedice/FFLU/main/Images/logo.png" alt="FFLU Logo" width="128" height="128">
+
+[![FFLU Icon](https://img.shields.io/badge/FFLU-Final%20Fantasy%20Level%20Up!-FFE568?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==&logoColor=white)](https://github.com/donniedice/FFLU)
 
 ### 🎵 *Experience the legendary Final Fantasy level-up sound!* 🎵
 
@@ -118,6 +120,7 @@
 | `/fflu test` | Play a test sound |
 | `/fflu status` | Show current settings |
 | `/fflu sound <variant>` | Set sound quality (high/medium/low) |
+| `/fflu volume <channel>` | Set volume channel (Master/SFX/Music/Ambience) |
 | `/fflu reset` | Reset all settings to defaults |
 
 </div>
@@ -126,6 +129,7 @@
 
 ```
 /fflu sound high          # Use high quality sound
+/fflu volume SFX         # Play on SFX channel
 /fflu disable            # Temporarily disable
 /fflu test               # Test current sound
 /fflu status             # Check settings
@@ -143,6 +147,7 @@
 All your preferences are automatically saved:
 - Addon enable/disable state
 - Selected sound variant
+- Volume channel preference
 - Default sound muting preference
 - Welcome message display
 
@@ -158,12 +163,16 @@ FFLU automatically detects your WoW client language:
 
 <div align="center">
 
-| WoW Version | Interface | Status |
-|-------------|-----------|--------|
-| The War Within | 110105 | ✅ Fully Supported |
-| Classic Cataclysm | 40402 | ✅ Fully Supported |
-| Classic Era | 11507 | ✅ Fully Supported |
-| Mists of Pandaria | 50500 | ✅ Fully Supported |
+| WoW Version | Interface | Status | TOC File |
+|-------------|-----------|--------|----------|
+| The War Within | 110105 | ✅ Fully Supported | `FFLU.toc` |
+| Mists of Pandaria Classic | 50500 | ✅ Fully Supported | `FFLU_Mists.toc` |
+| Cataclysm Classic | 40402 | ✅ Fully Supported | `FFLU_Cata.toc` |
+| Wrath of the Lich King Classic | 30403 | ✅ Fully Supported | `FFLU_Wrath.toc` |
+| Burning Crusade Classic | 20504 | ✅ Fully Supported | `FFLU_BCC.toc` |
+| Classic Era / Hardcore / SoD | 11507 | ✅ Fully Supported | `FFLU_Vanilla.toc` |
+
+**Note**: Classic Era, Hardcore, and Season of Discovery all use the same interface version and TOC file.
 
 </div>
 

@@ -1,4 +1,4 @@
-## Interface: 11507
+## Interface: 11507, 11506, 11505, 11503, 11502, 11501, 11500, 11404, 11403, 11402, 11401, 11400, 11307, 11306, 11305, 11304, 11303, 11302
 ## Version: 2.1.14
 ## Title: - |cffffe568F|r|cffffffffinal|r |cffffe568F|r|cffffffffantasy|r |cffffe568L|r|cffffffffevel|r |cffffe568U|r|cffffffffp!|r - |cff8080ff2.1.14|r 
 ## Notes: Enhanced Final Fantasy level-up sound with slash commands, settings, and multi-language support.|n|r|cff1f1d1eBy DonnieDice|r
@@ -12,6 +12,11 @@
 ## X-Curse-Project-ID: 305470
 ## X-Wago-ID: Xb6XE0Kp
 ## X-WoWI-ID: 26252
+## X-Embeds: 
+## X-License: MIT
+## X-Localizations: enUS, deDE, frFR, esES, ruRU
+## DefaultState: Enabled
+## LoadOnDemand: 0
 
 data\locales.lua
 data\core.lua

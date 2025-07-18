@@ -1,6 +1,6 @@
 --=====================================================================================
 -- FFLU | Final Fantasy Level-Up! - locales.lua
--- Version: 2.1.13
+-- Version: 2.1.14
 -- Author: DonnieDice
 -- Description: Multi-language localization system for FFLU
 --=====================================================================================
@@ -37,6 +37,7 @@ local L = {
     ["HELP_STATUS"] = "|cffffffff/fflu status|r - Show current settings",
     ["HELP_SOUND"] = "|cffffffff/fflu sound <variant>|r - Set sound (high/medium/low)",
     ["HELP_RESET"] = "|cffffffff/fflu reset|r - Reset all settings to defaults",
+    ["HELP_VOLUME"] = "|cffffffff/fflu volume <channel>|r - Set volume channel (Master/SFX/Music/Ambience)",
     
     -- Status Display
     ["STATUS_HEADER"] = "|cffffe568=== FFLU Status ===|r",
@@ -57,6 +58,10 @@ local L = {
     ["SOUND_HIGH"] = "High",
     ["SOUND_MEDIUM"] = "Medium", 
     ["SOUND_LOW"] = "Low",
+    
+    -- Volume Channels
+    ["VOLUME_SET"] = "Volume channel set to: |cffffffff%s|r",
+    ["ERROR_INVALID_VOLUME"] = "Invalid volume channel. Use: Master, SFX, Music, or Ambience",
     
     -- RGX Mods Branding
     ["RGX_MODS_PREFIX"] = "|cffffe568RGX Mods|r",
@@ -86,6 +91,10 @@ if locale == "ruRU" then
     L["HELP_STATUS"] = "|cffffffff/fflu status|r - Показать текущие настройки"
     L["HELP_SOUND"] = "|cffffffff/fflu sound <вариант>|r - Установить звук (high/medium/low)"
     L["HELP_RESET"] = "|cffffffff/fflu reset|r - Сбросить все настройки на стандартные"
+    L["HELP_VOLUME"] = "|cffffffff/fflu volume <канал>|r - Установить канал громкости (Master/SFX/Music/Ambience)"
+    
+    L["VOLUME_SET"] = "Канал громкости установлен на: |cffffffff%s|r"
+    L["ERROR_INVALID_VOLUME"] = "Недопустимый канал громкости. Используйте: Master, SFX, Music или Ambience"
     
     L["STATUS_HEADER"] = "|cffffe568=== Статус FFLU ===|r"
     L["STATUS_STATUS"] = "Статус:"
@@ -129,6 +138,10 @@ elseif locale == "deDE" then
     L["HELP_STATUS"] = "|cffffffff/fflu status|r - Aktuelle Einstellungen anzeigen"
     L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Sound setzen (high/medium/low)"
     L["HELP_RESET"] = "|cffffffff/fflu reset|r - Alle Einstellungen zurücksetzen"
+    L["HELP_VOLUME"] = "|cffffffff/fflu volume <kanal>|r - Lautstärkekanal setzen (Master/SFX/Music/Ambience)"
+    
+    L["VOLUME_SET"] = "Lautstärkekanal gesetzt auf: |cffffffff%s|r"
+    L["ERROR_INVALID_VOLUME"] = "Ungültiger Lautstärkekanal. Verwende: Master, SFX, Music oder Ambience"
     
     L["STATUS_HEADER"] = "|cffffe568=== FFLU Status ===|r"
     L["STATUS_STATUS"] = "Status:"
@@ -172,6 +185,10 @@ elseif locale == "frFR" then
     L["HELP_STATUS"] = "|cffffffff/fflu status|r - Afficher les paramètres actuels"
     L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Définir le son (high/medium/low)"
     L["HELP_RESET"] = "|cffffffff/fflu reset|r - Réinitialiser tous les paramètres"
+    L["HELP_VOLUME"] = "|cffffffff/fflu volume <canal>|r - Définir le canal de volume (Master/SFX/Music/Ambience)"
+    
+    L["VOLUME_SET"] = "Canal de volume défini sur : |cffffffff%s|r"
+    L["ERROR_INVALID_VOLUME"] = "Canal de volume invalide. Utilisez : Master, SFX, Music ou Ambience"
     
     L["STATUS_HEADER"] = "|cffffe568=== Statut FFLU ===|r"
     L["STATUS_STATUS"] = "Statut :"
@@ -215,6 +232,10 @@ elseif locale == "esES" or locale == "esMX" then
     L["HELP_STATUS"] = "|cffffffff/fflu status|r - Mostrar configuración actual"
     L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Establecer sonido (high/medium/low)"
     L["HELP_RESET"] = "|cffffffff/fflu reset|r - Restablecer toda la configuración"
+    L["HELP_VOLUME"] = "|cffffffff/fflu volume <canal>|r - Establecer canal de volumen (Master/SFX/Music/Ambience)"
+    
+    L["VOLUME_SET"] = "Canal de volumen establecido en: |cffffffff%s|r"
+    L["ERROR_INVALID_VOLUME"] = "Canal de volumen inválido. Usa: Master, SFX, Music o Ambience"
     
     L["STATUS_HEADER"] = "|cffffe568=== Estado FFLU ===|r"
     L["STATUS_STATUS"] = "Estado:"

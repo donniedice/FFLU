@@ -164,6 +164,10 @@ function FFLU:HandleSlashCommand(args)
             HELP_TEST = "|cffffffff/fflu test|r - Play test sound",
             HELP_STATUS = "|cffffffff/fflu status|r - Show current settings",
             HELP_SOUND = "|cffffffff/fflu sound <variant>|r - Set sound (high/medium/low)",
+            HELP_VOLUME = "|cffffffff/fflu volume <channel>|r - Set volume channel (Master/SFX/Music/Ambience)",
+            HELP_RESET = "|cffffffff/fflu reset|r - Reset all settings to defaults",
+            VOLUME_SET = "Volume channel set to: |cffffffff%s|r",
+            ERROR_INVALID_VOLUME = "Invalid volume channel. Use: Master, SFX, Music, or Ambience",
             STATUS_HEADER = "|cffffe568=== FFLU Status ===|r",
             STATUS_STATUS = "Status:",
             STATUS_SOUND = "Sound Variant: |cffffffff%s|r",
@@ -210,6 +214,21 @@ function FFLU:HandleSlashCommand(args)
         else
             print(iconPrefix .. " " .. self.L["ERROR_PREFIX"] .. " " .. self.L["ERROR_INVALID_VARIANT_OPTIONS"])
         end
+    elseif string.match(command, "^volume ") then
+        local channel = string.match(command, "^volume (.+)")
+        if channel then
+            -- Capitalize first letter for consistency
+            channel = channel:sub(1,1):upper() .. channel:sub(2):lower()
+            -- Validate volume channels
+            if channel == "Master" or channel == "Sfx" or channel == "Music" or channel == "Ambience" then
+                -- Fix SFX capitalization
+                if channel == "Sfx" then channel = "SFX" end
+                self:SetSetting("volume", channel)
+                print(iconPrefix .. " |cffffe568FFLU:|r " .. string.format(self.L["VOLUME_SET"] or "Volume channel set to: |cffffffff%s|r", channel))
+            else
+                print(iconPrefix .. " " .. self.L["ERROR_PREFIX"] .. " " .. (self.L["ERROR_INVALID_VOLUME"] or "Invalid volume channel. Use: Master, SFX, Music, or Ambience"))
+            end
+        end
     else
         print(iconPrefix .. " " .. self.L["ERROR_PREFIX"] .. " " .. self.L["ERROR_UNKNOWN_COMMAND"])
     end
@@ -226,6 +245,7 @@ function FFLU:ShowHelp()
     print(iconPrefix .. " " .. self.L["HELP_TEST"])
     print(iconPrefix .. " " .. self.L["HELP_STATUS"])
     print(iconPrefix .. " " .. self.L["HELP_SOUND"])
+    print(iconPrefix .. " " .. (self.L["HELP_VOLUME"] or "|cffffffff/fflu volume <channel>|r - Set volume channel (Master/SFX/Music/Ambience)"))
     print(iconPrefix .. " " .. self.L["HELP_RESET"])
     print(iconPrefix .. " " .. (self.L["COMMUNITY_MESSAGE"] or "Part of the RealmGX Community - join us at discord.gg/N7kdKAHVVF"))
 end

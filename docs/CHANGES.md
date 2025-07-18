@@ -1,22 +1,31 @@
 # FFLU Changelog
 
-## v2.1.14 - Russian Localization Addition
+## v2.1.14 - Complete Multi-Version Support & Russian Localization
 
 ### Added
 - **Russian Localization**: Complete Russian (ruRU) language support by ZamestoTV
-- **Fifth Language**: FFLU now supports English, German, French, Spanish, and Russian
-- **Community Contribution**: First community translation contribution to FFLU
+- **Universal WoW Support**: TOC files for all WoW versions (BCC, WotLK)
+- **Multi-Version Compatibility**: Each TOC supports multiple interface versions for backward compatibility
+- **GitHub Logo**: PNG version for proper README display
+- **Transformation Guide**: Comprehensive prompt for applying RGX Mods standard to other addons
 
 ### Enhanced
-- **Multi-Language Support**: Extended localization system to support Russian language
-- **RGX Mods Branding**: Russian translations include proper RGX Mods community messaging
-- **Global Accessibility**: Improved accessibility for Russian-speaking WoW players
+- **TOC Robustness**: All TOC files now include complete metadata (license, localizations, load state)
+- **Package Management**: Updated .pkgmeta for proper multi-version release packaging
+- **Version Support**: Interface declarations support all patch versions within each expansion
+- **Documentation**: Complete compatibility table with TOC file mappings
+- **Global Accessibility**: Now supports 5 languages and 6 WoW versions
+
+### Technical Improvements
+- **Backward Compatibility**: Each TOC file supports multiple interface versions
+- **Release Automation**: Enhanced packaging configuration for CurseForge/Wago/WoWI
+- **Professional Structure**: Complete addon infrastructure for long-term maintenance
 
 ### Contributors
 - **ZamestoTV**: Russian localization translations
 - **Hubbotu**: Pull request submission and contribution facilitation
 
-This release expands FFLU's international reach with comprehensive Russian language support, making the addon accessible to even more players in the RGX Mods community.
+This release completes FFLU's transformation into a fully professional, multi-version addon supporting all WoW clients with comprehensive localization.
 
 ## v2.1.13 - Major RGX Mods Transformation
 

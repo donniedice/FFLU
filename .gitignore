@@ -1,0 +1,53 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# WoW Addon Development
+*.bak
+*.old
+*.tmp
+.release/
+.beta/
+
+# Package files
+*.zip
+*.7z
+*.rar
+
+# Build artifacts
+node_modules/
+dist/
+build/
+
+# Local configuration
+.env.local
+*.local
+
+# Logs
+*.log
+
+# Claude/AI artifacts
+.claude/
+claude_artifacts/
+
+# Test files
+test/
+tests/
+*.test.lua
+
+# Temporary files
+temp/
+tmp/

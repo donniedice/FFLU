@@ -1,2 +1,22 @@
 package-as: FFLU
 manual-changelog: docs/CHANGES.md
+
+enable-nolib-creation: no
+
+move-folders:
+  FFLU/FFLU: FFLU
+
+ignore:
+  - .gitignore
+  - .github
+  - README.md
+  - CLAUDE.md
+
+plain-copy:
+  - Images/logo.png
+
+manual-changelog:
+  filename: docs/CHANGES.md
+  markup-type: markdown
+
+license-output: LICENSE
