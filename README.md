@@ -275,7 +275,7 @@ Thanks to all the amazing people who have contributed to FFLU! 🎉
 
 <div align="center">
 
-[![DonnieDice's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=donniedice&theme=radical&hide_border=true)](https://github.com/donniedice/FFLU)
+[![DonnieDice's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=donniedice&theme=radical&hide_border=true)](https://wakatime.com/@donniedice)
 
 </div>
 
