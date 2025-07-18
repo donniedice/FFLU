@@ -1,3 +1,13 @@
+v2.1.14-------------------------------------------------------------------
+- Added - Russian localization (ruRU) by ZamestoTV [locales.lua]
+- Added - Fifth language support for FFLU (English, German, French, Spanish, Russian) [locales.lua]
+- Added - Community contribution integration with proper attribution [locales.lua]
+- Enhanced - Multi-language support system with Russian language [locales.lua]
+- Enhanced - RGX Mods branding consistency in Russian translations [locales.lua]
+- Enhanced - Global accessibility for Russian-speaking WoW players [locales.lua]
+- Updated - Version to 2.1.14 across all files [All TOC files, core.lua]
+- Thanks - ZamestoTV for Russian translations and Hubbotu for pull request
+
 v2.1.13-------------------------------------------------------------------
 - Added - Complete slash command system with /fflu interface [core.lua]
 - Added - Persistent settings via SavedVariables system [FFLUSettings]

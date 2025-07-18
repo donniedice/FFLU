@@ -91,7 +91,7 @@
 | 🔇 **Smart Management** | Automatically mutes default WoW level-up sound |
 | ⚙️ **Complete Control** | Enable/disable features with comprehensive slash commands |
 | 💾 **Persistent Settings** | Your preferences are saved between sessions |
-| 🌍 **Multi-Language** | English, German, French, and Spanish localization |
+| 🌍 **Multi-Language** | English, German, French, Spanish, and Russian localization |
 | 🎨 **Professional UI** | Clean interface with consistent RGX Mods branding |
 | 🛡️ **Error-Free** | Comprehensive error handling and validation |
 | 🔧 **Reset Function** | Easily reset all settings to defaults |
@@ -152,6 +152,7 @@ FFLU automatically detects your WoW client language:
 - **Deutsch** (German)
 - **Français** (French)
 - **Español** (Spanish)
+- **Русский** (Russian) - *New!* by ZamestoTV
 
 ## 🎮 Compatibility
 
@@ -184,25 +185,27 @@ FFLU automatically detects your WoW client language:
 ## 🆕 What's New
 
 <details>
-<summary><strong>v2.1.13 - Major RGX Mods Transformation</strong></summary>
+<summary><strong>v2.1.14 - Russian Localization Addition</strong></summary>
 
-### Added
-- Complete slash command system with `/fflu` interface
-- Persistent settings via SavedVariables system
-- Multi-language support for English, German, French, Spanish
-- Professional error handling with pcall protection
-- RGX Mods branding and RealmGX community integration
-- Reset command to restore default settings
-- Enhanced welcome message with community integration
+### v2.1.14 - Russian Localization Addition
+- **Added**: Complete Russian (ruRU) language support by ZamestoTV
+- **Added**: Fifth language support for global accessibility
+- **Enhanced**: Multi-language system with Russian localization
+- **Thanks**: ZamestoTV for Russian translations, Hubbotu for pull request
 
-### Updated
-- Code architecture with object-oriented design
-- README structure with professional RGX Mods layout
-- All TOC files with enhanced descriptions
-
-### Enhanced
-- User experience with consistent RGX Mods branding
-- Community integration throughout the addon
+### v2.1.13 - Major RGX Mods Transformation
+- **Added**: Complete slash command system with `/fflu` interface
+- **Added**: Persistent settings via SavedVariables system
+- **Added**: Multi-language support for English, German, French, Spanish
+- **Added**: Professional error handling with pcall protection
+- **Added**: RGX Mods branding and RealmGX community integration
+- **Added**: Reset command to restore default settings
+- **Added**: Enhanced welcome message with community integration
+- **Updated**: Code architecture with object-oriented design
+- **Updated**: README structure with professional RGX Mods layout
+- **Updated**: All TOC files with enhanced descriptions
+- **Enhanced**: User experience with consistent RGX Mods branding
+- **Enhanced**: Community integration throughout the addon
 
 </details>
 

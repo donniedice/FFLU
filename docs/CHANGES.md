@@ -1,5 +1,23 @@
 # FFLU Changelog
 
+## v2.1.14 - Russian Localization Addition
+
+### Added
+- **Russian Localization**: Complete Russian (ruRU) language support by ZamestoTV
+- **Fifth Language**: FFLU now supports English, German, French, Spanish, and Russian
+- **Community Contribution**: First community translation contribution to FFLU
+
+### Enhanced
+- **Multi-Language Support**: Extended localization system to support Russian language
+- **RGX Mods Branding**: Russian translations include proper RGX Mods community messaging
+- **Global Accessibility**: Improved accessibility for Russian-speaking WoW players
+
+### Contributors
+- **ZamestoTV**: Russian localization translations
+- **Hubbotu**: Pull request submission and contribution facilitation
+
+This release expands FFLU's international reach with comprehensive Russian language support, making the addon accessible to even more players in the RGX Mods community.
+
 ## v2.1.13 - Major RGX Mods Transformation
 
 ### Added
