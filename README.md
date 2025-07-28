@@ -1,15 +1,13 @@
-# 🎮 FFLU | Final Fantasy Level-Up!
-## 🎮 **RGX Mods** - *RealmGX Community Project*
+# 🎵 FFLU | Final Fantasy Level-Up!
+## 🎮 **[RGX Mods]** - *RealmGX Community Project*
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/donniedice/FFLU/main/images/logo.png" alt="FFLU Logo" width="128" height="128">
+![FFLU Logo](images/FFLU_logo_400x400.png)
 
-[![FFLU Icon](https://img.shields.io/badge/FFLU-Final%20Fantasy%20Level%20Up!-FFE568?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==&logoColor=white)](https://github.com/donniedice/FFLU)
+### 🎵 *"Victory Fanfare!"* - Now in World of Warcraft! 🎵
 
-### 🎵 *Experience the legendary Final Fantasy level-up sound!* 🎵
-
-**Professional World of Warcraft addon that plays the iconic "LEVEL UP!" chime from Final Fantasy whenever you level up, with extensive customization options and multi-language support.**
+**Transform your WoW leveling experience with the iconic Final Fantasy level-up sound!**
 
 ### 🌟 **Join the <span style="color:#ff6b6b">R</span>ealmGX Community - <span style="color:#4ecdc4">G</span>amers e<span style="color:#4ecdc4">X</span>treme!** 🌟
 [![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=7289da&label=Join%20Our%20Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/N7kdKAHVVF)
@@ -31,7 +29,7 @@
 <!-- Platform Badges -->
 [![CurseForge Downloads](https://img.shields.io/badge/CurseForge-Downloads-orange?style=flat-square&logo=curseforge)](https://www.curseforge.com/wow/addons/fflu)
 [![Wago Downloads](https://img.shields.io/badge/Wago.io-Downloads-purple?style=flat-square&logo=wago)](https://addons.wago.io/addons/fflu)
-[![WoWInterface Downloads](https://img.shields.io/badge/WoWInterface-Downloads-blue?style=flat-square&logo=worldofwarcraft)](https://www.wowinterface.com/downloads/info26252)
+[![WoWInterface Downloads](https://img.shields.io/badge/WoWInterface-Downloads-blue?style=flat-square&logo=worldofwarcraft)](https://www.wowinterface.com/downloads/info26264-FFLU-FinalFantasyLevelUp.html)
 
 <!-- WoW Compatibility -->
 [![WoW Retail](https://img.shields.io/badge/WoW-The%20War%20Within-green?style=flat-square&logo=worldofwarcraft)](https://worldofwarcraft.com)
@@ -41,6 +39,8 @@
 
 </div>
 
+---
+
 ## 🌟 Join the RGX Mods Community!
 
 <div align="center">
@@ -49,17 +49,19 @@
 
 [![Join Discord](https://img.shields.io/badge/Join%20Our%20Discord-RealmGX%20Community-7289da?style=for-the-badge&logo=discord&logoColor=white&labelColor=5865F2)](https://discord.gg/N7kdKAHVVF)
 
-**🎮 <span style="color:#ff6b6b">R</span>ealm <span style="color:#4ecdc4">G</span>amers e<span style="color:#4ecdc4">X</span>treme - Where WoW Enthusiasts Unite!**
+**🎮 Realm Gamers eXtreme - Where WoW Enthusiasts Unite!**
 
 ✨ **What awaits you in our Discord:**
-- 🛠️  **Instant addon support** from the RGX Mods team
-- 🎯 **Feature requests** and direct dev communication
+- 🛠️ **Instant addon support** from the RGX Mods team
+- 🎯 **Feature requests** and direct dev communication  
 - 🚀 **Beta testing** opportunities for new releases
 - 🤝 **Community of WoW players** sharing tips and experiences
 - 📢 **First to know** about new RGX Mods releases
 - 🎉 **Events, giveaways**, and community activities
 
 </div>
+
+---
 
 ## 💖 Support RGX Mods
 
@@ -78,145 +80,245 @@
 
 </div>
 
+---
+
 ## 🎯 What is FFLU?
 
-**FFLU | Final Fantasy Level-Up!** is a professional World of Warcraft addon that brings the iconic Final Fantasy level-up sound to your WoW experience. As part of the **RGX Mods** collection, it delivers premium quality with extensive customization options, multi-language support, and seamless integration across all WoW versions.
+**FFLU | Final Fantasy Level-Up!** is the ultimate **RGX Mods** creation for bringing that triumphant **"Victory Fanfare!"** feeling from Final Fantasy directly into your World of Warcraft experience. No more bland WoW level-up sounds – now you get the legendary fanfare that made every Final Fantasy level-up feel like a true victory!
+
+### 🔥 **Why Choose RGX Mods - FFLU?**
+- **🎮 RGX Quality**: Built by the RealmGX community with passion
+- **🌟 Community-Driven**: Developed with input from fellow gamers
+- **🛠️ Professional Standards**: Modern WoW addon architecture
+- **🌍 Multi-Language**: Supports English, Russian, German, French, and Spanish
+- **🎯 Cross-Compatible**: Works across all WoW versions
+- **💬 Active Support**: Join our Discord for instant help!
+
+---
 
 ## ✨ Features
 
-<div align="center">
+<table>
+<tr>
+<td width="50%">
 
-| Feature | Description |
-|---------|-------------|
-| 🎵 **Iconic Sound** | Authentic Final Fantasy level-up chime on every level gain |
-| 🎚️ **Multiple Variants** | Choose from high, medium, or low quality sound versions |
-| 🔇 **Smart Management** | Automatically mutes default WoW level-up sound |
-| ⚙️ **Complete Control** | Enable/disable features with comprehensive slash commands |
-| 💾 **Persistent Settings** | Your preferences are saved between sessions |
-| 🌍 **Multi-Language** | English, German, French, Spanish, and Russian localization |
-| 🎨 **Professional UI** | Clean interface with consistent RGX Mods branding |
-| 🛡️ **Error-Free** | Comprehensive error handling and validation |
-| 🔧 **Reset Function** | Easily reset all settings to defaults |
+### 🎵 **Audio Experience**
+- **Custom FF Sound**: Authentic Final Fantasy fanfare
+- **Quality Options**: High, medium, or low quality variants
+- **Volume Control**: Master channel integration
+- **Smart Muting**: Auto-mute WoW's default sound
 
-</div>
+</td>
+<td width="50%">
 
-## 🚀 Quick Start
+### ⚙️ **Advanced Settings**
+- **Persistent Configuration**: Settings saved across sessions
+- **Instant Commands**: Simplified slash command system
+- **Error Handling**: Robust protection against crashes
+- **Performance Optimized**: Efficient memory usage
 
-1. **Install** FFLU from your preferred platform
-2. **Launch** World of Warcraft
-3. **Level up** and enjoy the iconic sound!
-4. **Customize** with `/fflu help` to see all options
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-## 📋 Command Reference
-
-<div align="center">
-
-| Command | Description |
-|---------|-------------|
-| `/fflu help` | Show all available commands |
-| `/fflu enable` | Enable the addon |
-| `/fflu disable` | Disable the addon |
-| `/fflu toggle` | Toggle addon on/off |
-| `/fflu test` | Play a test sound |
-| `/fflu status` | Show current settings |
-| `/fflu sound <variant>` | Set sound quality (high/medium/low) |
-| `/fflu volume <channel>` | Set volume channel (Master/SFX/Music/Ambience) |
-| `/fflu reset` | Reset all settings to defaults |
-
-</div>
-
-### Usage Examples
-
-```
-/fflu sound high          # Use high quality sound
-/fflu volume SFX         # Play on SFX channel
-/fflu disable            # Temporarily disable
-/fflu test               # Test current sound
-/fflu status             # Check settings
-/fflu reset              # Reset to defaults
-```
-
-## 🎮 Advanced Configuration
-
-### Sound Variants
-- **High**: Premium quality for audiophiles
-- **Medium**: Balanced quality and performance (default)
-- **Low**: Lightweight for performance-focused setups
-
-### Persistent Settings
-All your preferences are automatically saved:
-- Addon enable/disable state
-- Selected sound variant
-- Volume channel preference
-- Default sound muting preference
-- Welcome message display
-
-### Multi-Language Support
-FFLU automatically detects your WoW client language:
+### 🌍 **Multi-Language Support**
 - **English** (Default)
+- **Русский** (Russian) - *by ZamestoTV*
 - **Deutsch** (German)
 - **Français** (French)
 - **Español** (Spanish)
-- **Русский** (Russian) - *New!* by ZamestoTV (Hubbotu)
 
-## 🎮 Compatibility
+</td>
+<td width="50%">
+
+### 🎮 **WoW Compatibility**
+- **The War Within** (Retail)
+- **Classic WoW** (Era)
+- **Classic Cataclysm**
+- **Mists of Pandaria**
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Quick Start
+
+### 1. **Download**
+Get FFLU from any of these platforms:
+- [🔥 CurseForge](https://www.curseforge.com/wow/addons/fflu) *(Recommended)*
+- [📦 GitHub](https://github.com/donniedice/FFLU)
+- [🎯 Wago.io](https://addons.wago.io/addons/fflu)
+- [⚡ WoWInterface](https://www.wowinterface.com/downloads/info26264-FFLU-FinalFantasyLevelUp.html)
+
+### 2. **Install**
+Extract to your WoW AddOns directory:
+```
+📁 World of Warcraft/
+  📁 _retail_/Interface/AddOns/          (The War Within)
+  📁 _classic_era_/Interface/AddOns/     (Classic WoW)
+  📁 _classic_/Interface/AddOns/         (Classic Cataclysm)
+```
+
+### 3. **Activate**
+1. Restart World of Warcraft
+2. Enable **FFLU** in your AddOns menu
+3. Type `/fflu help` to see all commands!
+
+---
+
+## 🎛️ Command Reference
+
+Use `/fflu` followed by:
+
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+<tr>
+<td><code>help</code></td>
+<td>Show all available commands</td>
+<td><code>/fflu help</code></td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td>Play test sound</td>
+<td><code>/fflu test</code></td>
+</tr>
+<tr>
+<td><code>enable</code></td>
+<td>Enable addon</td>
+<td><code>/fflu enable</code></td>
+</tr>
+<tr>
+<td><code>disable</code></td>
+<td>Disable addon (unmutes default sound)</td>
+<td><code>/fflu disable</code></td>
+</tr>
+<tr>
+<td><code>high</code></td>
+<td>Use high quality sound</td>
+<td><code>/fflu high</code></td>
+</tr>
+<tr>
+<td><code>med</code></td>
+<td>Use medium quality sound</td>
+<td><code>/fflu med</code></td>
+</tr>
+<tr>
+<td><code>low</code></td>
+<td>Use low quality sound</td>
+<td><code>/fflu low</code></td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Advanced Configuration
+
+### Settings Persistence
+All your settings are automatically saved and restored between gaming sessions using WoW's SavedVariables system.
+
+### Default Settings
+```lua
+enabled = true           -- Addon is active
+soundVariant = "medium"  -- Medium quality sound
+muteDefault = true       -- WoW's default sound is muted
+showWelcome = true       -- Show welcome message on login
+volume = "Master"        -- Volume channel
+```
+
+### Troubleshooting
+- **No sound playing?** Try `/fflu test` to verify installation
+- **Wrong language?** The addon auto-detects your WoW client language
+- **Settings not saving?** Ensure you have write permissions in your WoW directory
+
+---
+
+## 📈 What's New in v2.1.18
+
+<details>
+<summary><strong>🎉 Click to see the latest updates!</strong></summary>
+
+### 🆕 **Major Updates**
+- ✅ Simplified command structure - direct sound selection
+- ✅ Auto-unmute default sound when disabling addon
+- ✅ Improved performance with optimized code
+- ✅ Updated TOC files with proper formatting
+- ✅ Removed unnecessary complex commands
+- ✅ Enhanced error handling and stability
+- ✅ Russian localization by ZamestoTV (Hubbotu)
+
+### 🔧 **Improvements**
+- ✅ Cleaner user experience
+- ✅ Better memory efficiency
+- ✅ Consistent RGX Mods branding
+- ✅ Updated documentation
+
+### 🐛 **Fixes**
+- ✅ Localization initialization issues
+- ✅ SavedVariables timing problems
+- ✅ Race condition protection
+
+</details>
+
+---
+
+## 🤝 RGX Mods Community & Support
+
+### 💬 **Join RealmGX - Your Gaming Family!**
 
 <div align="center">
 
-| WoW Version | Interface | Status | TOC File |
-|-------------|-----------|--------|----------|
-| The War Within | 110105 | ✅ Fully Supported | `FFLU.toc` |
-| Mists of Pandaria Classic | 50500 | ✅ Fully Supported | `FFLU_Mists.toc` |
-| Cataclysm Classic | 40402 | ✅ Fully Supported | `FFLU_Cata.toc` |
-| Wrath of the Lich King Classic | 30403 | ✅ Fully Supported | `FFLU_Wrath.toc` |
-| Burning Crusade Classic | 20504 | ✅ Fully Supported | `FFLU_BCC.toc` |
-| Classic Era / Hardcore / SoD | 11507 | ✅ Fully Supported | `FFLU_Vanilla.toc` |
+[![Join Discord](https://img.shields.io/badge/🎮%20Join%20RealmGX%20Discord-Realm%20Gamers%20eXtreme-7289da?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/N7kdKAHVVF)
 
-**Note**: Classic Era, Hardcore, and Season of Discovery all use the same interface version and TOC file.
+**🌟 The heart of RGX Mods community!**
 
 </div>
 
-## 📥 Installation
+**🎯 Why join our Discord?**
+- **⚡ Lightning-fast support** from RGX Mods developers
+- **🎮 Connect with WoW enthusiasts** from around the world
+- **🚀 Beta test new features** before anyone else
+- **💡 Share ideas** and influence future RGX Mods development
+- **🎉 Participate in events** and community challenges
+- **📢 Get notified** about new RGX Mods releases instantly
 
-1. **Download** from your preferred platform:
-   - [CurseForge](https://www.curseforge.com/wow/addons/fflu)
-   - [Wago.io](https://addons.wago.io/addons/fflu)
-   - [WoWInterface](https://www.wowinterface.com/downloads/info26252)
-   - [GitHub](https://github.com/donniedice/FFLU)
+### 🛠️ **Get Help & Support**
+- **🎮 Discord**: [RealmGX Community](https://discord.gg/N7kdKAHVVF) *(Primary Support)*
+- **🐛 Issues**: [GitHub Issues](https://github.com/donniedice/FFLU/issues)
+- **💭 Feature Requests**: [GitHub Discussions](https://github.com/donniedice/FFLU/discussions)
+- **📧 Contact**: Reach out via [GitHub](https://github.com/donniedice)
 
-2. **Extract** to your WoW AddOns directory:
-   - **Retail**: `World of Warcraft/_retail_/Interface/AddOns`
-   - **Classic**: `World of Warcraft/_classic_/Interface/AddOns`
-   - **Classic Era**: `World of Warcraft/_classic_era_/Interface/AddOns`
+### 🎯 **Contributing to RGX Mods**
+The RGX Mods community thrives on collaboration! Here's how you can help:
+- 🐛 **Report bugs** and issues
+- 💡 **Suggest new features** in our Discord
+- 🌍 **Help with translations** for global players
+- 📝 **Improve documentation** for better user experience
+- ⭐ **Star the repository** to show your support
+- 🎮 **Join our Discord** and become part of the family!
 
-3. **Restart** WoW and enable in AddOns menu
+### 🏷️ **Spread the RGX Mods Love**
+- 💬 **Tell your guildmates** about RGX Mods
+- 📱 **Share screenshots** on social media with #RGXMods
+- ⭐ **Write reviews** on CurseForge and other platforms
+- 🎥 **Stream with RGX Mods** and show off our addons
+- 🎮 **Invite friends** to join the RealmGX Discord!
 
-## 🆕 What's New
+---
 
-<details>
-<summary><strong>v2.1.14 - Russian Localization Addition</strong></summary>
+## 📄 Legal & License
 
-### v2.1.14 - Russian Localization Addition
-- **Added**: Complete Russian (ruRU) language support by ZamestoTV (Hubbotu)
-- **Added**: Fifth language support for global accessibility
-- **Enhanced**: Multi-language system with Russian localization
-- **Thanks**: ZamestoTV (Hubbotu) for Russian translations and pull request submission
+This project is licensed under the [MIT License](https://github.com/donniedice/FFLU/blob/main/LICENSE).
 
-### v2.1.13 - Major RGX Mods Transformation
-- **Added**: Complete slash command system with `/fflu` interface
-- **Added**: Persistent settings via SavedVariables system
-- **Added**: Multi-language support for English, German, French, Spanish
-- **Added**: Professional error handling with pcall protection
-- **Added**: RGX Mods branding and RealmGX community integration
-- **Added**: Reset command to restore default settings
-- **Added**: Enhanced welcome message with community integration
-- **Updated**: Code architecture with object-oriented design
-- **Updated**: README structure with professional RGX Mods layout
-- **Updated**: All TOC files with enhanced descriptions
-- **Enhanced**: User experience with consistent RGX Mods branding
-- **Enhanced**: Community integration throughout the addon
+**Disclaimer**: This addon is provided "as is" without warranty. Use at your own risk. The author is not responsible for any issues arising from its use.
 
-</details>
+---
 
 ## 📊 Repository Statistics
 
@@ -287,7 +389,7 @@ Thanks to all the amazing people who have contributed to FFLU! 🎉
 
 <div align="center">
 
-[![DonnieDice's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=donniedice&theme=radical&hide_border=true)](https://wakatime.com/@donniedice)
+[![DonnieDice's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=donniedice&theme=radical&hide_border=true)](https://github.com/donniedice/FFLU)
 
 </div>
 
@@ -307,10 +409,10 @@ Thanks to all the amazing people who have contributed to FFLU! 🎉
 
 ## 🌟 **Thank you for choosing RGX Mods!** 🌟
 
-**Made with ❤️ by the RealmGX Community**
+**Made with ❤️ by the RealmGX Community**  
 **Lead Developer: [DonnieDice](https://github.com/donniedice)**
 
-*"Experience the magic of Final Fantasy in World of Warcraft!"*
+*"May your levels be swift and your fanfares be legendary!"*
 
 <div align="center">
 

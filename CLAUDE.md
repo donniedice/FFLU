@@ -4,63 +4,96 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-FFLU (Final Fantasy Level-Up!) is a professional World of Warcraft addon that plays the iconic Final Fantasy level-up chime when players level up. As of v2.1.13, it features a professional architecture with slash commands, persistent settings, multi-language support, and extensive error handling as part of the RGX Mods collection.
+FFLU (Final Fantasy Level-Up!) is a professional World of Warcraft addon that plays the iconic Final Fantasy level-up chime when players level up. As of v2.1.17, it features a professional architecture with slash commands, persistent settings, multi-language support, and extensive error handling as part of the RGX Mods collection.
 
 ## Project Structure
 
 - **data/core.lua**: Main addon functionality with advanced features
-- **data/locales.lua**: Multi-language support (English, German, French, Spanish)
+- **data/locales.lua**: Multi-language support (English, German, French, Spanish, Russian)
 - **sounds/**: Three variants of Final Fantasy level-up sound (high, medium, low)
 - **images/icon.tga**: Addon icon displayed in all output
-- **FFLU.toc**: TOC file for retail WoW (Interface: 110105)
-- **FFLU_Cata.toc**: TOC file for Classic Cataclysm (Interface: 40402)
-- **FFLU_Vanilla.toc**: TOC file for Classic WoW (Interface: 11507)
-- **FFLU_Mists.toc**: TOC file for Mists of Pandaria (Interface: 50500)
+- **TOC Files**: Support for all WoW versions:
+  - `FFLU.toc`: Retail WoW (Interface: 110105)
+  - `FFLU_Cata.toc`: Classic Cataclysm (Interface: 40402)
+  - `FFLU_Vanilla.toc`: Classic WoW (Interface: 11507)
+  - `FFLU_Mists.toc`: Mists of Pandaria (Interface: 50500)
+  - `FFLU_Wrath.toc`: Wrath of the Lich King (Interface: 30403)
+  - `FFLU_BCC.toc`: Burning Crusade Classic (Interface: 20504)
 
-## Commands
+## Development Commands
 
-Use `/fflu` followed by various commands for full functionality:
+### Version Management
+- Version is centralized in `ADDON_VERSION` constant in `data/core.lua` line 13
+- When updating version, modify this constant and all TOC files simultaneously
 
-- `/fflu help` - Show all available commands
-- `/fflu enable/disable/toggle` - Control addon state
-- `/fflu test` - Play test sound
-- `/fflu status` - Show current settings
-- `/fflu sound <variant>` - Set sound quality (high/medium/low)
-- `/fflu reset` - Reset all settings to defaults
+### GitHub Actions Release Workflow
+```bash
+# Manual release using GitHub Actions (preferred method)
+# 1. Update ADDON_VERSION in core.lua
+# 2. Update Version in all TOC files
+# 3. Update docs/CHANGES.md with release notes
+# 4. Go to Actions → Package and Release → Run workflow
+# 5. Enter version number (e.g., 2.1.18) and release type
+```
 
-## Settings Architecture
+### Testing Commands
+```bash
+# In-game testing
+/fflu test     # Play test sound
+/fflu status   # Check current settings
+/fflu help     # View all commands
+```
 
-**SavedVariables**: `FFLUSettings` automatically managed with fallback defaults
+## Architecture & Code Standards
 
-The addon uses an optimized, professional architecture:
+### SavedVariables System
+**SavedVariables**: `FFLUSettings` with automatic fallback to defaults
+- Settings are type-validated in `GetSetting` and `SetSetting` methods
+- Default configuration defined in `FFLU.defaults` table
+- Settings persist between sessions
 
-1. **Constants Management**: Performance-optimized with cached local constants
-2. **Global Namespace**: `FFLU` table with proper initialization and namespacing
-3. **Settings System**: Complete configuration management with type validation
-4. **Event System**: Optimized event handling with early returns
-5. **Slash Commands**: Complete `/fflu` interface with comprehensive validation
-6. **Error Handling**: Enterprise-grade protection with `pcall` protection
-7. **Localization**: Multi-language support with automatic locale detection
+### Localization Architecture
+- Locale detection via `GetLocale()`
+- Fallback system ensures English strings are always available
+- Localized strings accessed via `FFLU.L` table
+- Five languages supported: enUS, deDE, frFR, esES/esMX, ruRU
+
+### Error Handling Pattern
+All user-facing functions use `pcall` protection:
+```lua
+local success, errorMsg = pcall(function, args)
+if not success then
+    print(ICON_PATH .. " |cffff0000FFLU Error:|r " .. tostring(errorMsg))
+end
+```
+
+### Performance Optimizations
+- Constants cached at file start (lines 12-21 in core.lua)
+- Event handler uses early returns for efficiency
+- String concatenations minimized through caching
+- Local references to frequently used values
 
 ## RGX Mods Standards
 
-This addon follows RGX Mods community standards with Discord integration and professional error handling.
+This addon follows RGX Mods community standards:
+- Discord integration in welcome messages and help text
+- Consistent branding with `|cffffe568RGX Mods|r` color scheme
+- Professional error handling with user-friendly messages
+- Icon prefix (`ICON_PATH`) in all output for brand consistency
 
-## Key Features
+## Key Implementation Details
 
-- **Multi-Version Support**: Four TOC files for all WoW versions
-- **Settings Validation**: All user inputs are type-checked and validated
-- **Error Resilience**: Addon continues functioning even with errors
-- **Performance**: Optimized for minimal memory and CPU usage
-- **Maintainability**: Clean, documented code with clear separation of concerns
-- **User Experience**: Consistent RGX Mods branding with icons and professional messaging
-- **Community Integration**: RealmGX Discord integration throughout the addon
+### Slash Command System
+- Main handler: `FFLU:HandleSlashCommand(args)` in core.lua
+- Commands: help, enable, disable, toggle, test, status, sound, volume, reset
+- All commands validate input and provide feedback
 
-## Development Notes
+### Sound System
+- Three sound quality variants stored in `SOUND_PATHS` table
+- Default WoW level-up sound muted via `MuteSoundFile(569593)`
+- Volume channel support (Master/SFX/Music/Ambience)
 
-- Version centralized in `ADDON_VERSION` constant in `core.lua`
-- All four TOC files must be updated simultaneously
-- Version appears in welcome message and status display
-- Settings persist automatically via SavedVariables
-- Multi-language support with automatic locale detection
-- Professional error handling with pcall protection
+### Event System
+- Registers: PLAYER_LEVEL_UP, ADDON_LOADED, PLAYER_LOGIN
+- Event frame with error-protected handler
+- Optimized with early returns for each event type

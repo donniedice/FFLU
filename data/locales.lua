@@ -1,9 +1,12 @@
 --=====================================================================================
 -- FFLU | Final Fantasy Level-Up! - locales.lua
--- Version: 2.1.17
+-- Version: 2.1.18
 -- Author: DonnieDice
 -- Description: Multi-language localization system for FFLU
 --=====================================================================================
+
+-- Ensure global addon namespace exists
+FFLU = FFLU or {}
 
 -- Initialize localization table
 FFLU.L = FFLU.L or {}
@@ -22,22 +25,16 @@ local L = {
     
     -- Error Messages
     ["ERROR_PREFIX"] = "|cffff0000FFLU Error:|r",
-    ["ERROR_INVALID_VARIANT_OPTIONS"] = "Invalid sound variant. Use: high, medium, or low",
+    ["ERROR_INVALID_VARIANT_OPTIONS"] = "Invalid sound variant. Use: high, med, or low",
     ["ERROR_UNKNOWN_COMMAND"] = "Unknown command. Type |cffffffff/fflu help|r for available commands",
     ["ERROR_SOUND_FAILED"] = "Failed to play sound file",
     ["ERROR_INVALID_SOUND_VARIANT"] = "Invalid sound variant",
     
     -- Help System
     ["HELP_HEADER"] = "|cffffe568=== FFLU Commands ===|r",
-    ["HELP_HELP"] = "|cffffffff/fflu help|r - Show this help",
-    ["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Enable the addon",
-    ["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Disable the addon",
-    ["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Toggle addon on/off",
     ["HELP_TEST"] = "|cffffffff/fflu test|r - Play test sound",
-    ["HELP_STATUS"] = "|cffffffff/fflu status|r - Show current settings",
-    ["HELP_SOUND"] = "|cffffffff/fflu sound <variant>|r - Set sound (high/medium/low)",
-    ["HELP_RESET"] = "|cffffffff/fflu reset|r - Reset all settings to defaults",
-    ["HELP_VOLUME"] = "|cffffffff/fflu volume <channel>|r - Set volume channel (Master/SFX/Music/Ambience)",
+    ["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Enable addon",
+    ["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Disable addon",
     
     -- Status Display
     ["STATUS_HEADER"] = "|cffffe568=== FFLU Status ===|r",
@@ -77,21 +74,16 @@ if locale == "ruRU" then
     L["WELCOME_MESSAGE"] = "Добро пожаловать в FFLU! Введите |cffffffff/fflu help|r для команд"
     
     L["ERROR_PREFIX"] = "|cffff0000Ошибка FFLU:|r"
-    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Недопустимый вариант звука. Используйте: high, medium или low"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Недопустимый вариант звука. Используйте: high, med или low"
     L["ERROR_UNKNOWN_COMMAND"] = "Неизвестная команда. Введите |cffffffff/fflu help|r для доступных команд"
     L["ERROR_SOUND_FAILED"] = "Не удалось воспроизвести звуковой файл"
     L["ERROR_INVALID_SOUND_VARIANT"] = "Недопустимый вариант звука"
     
     L["HELP_HEADER"] = "|cffffe568=== Команды FFLU ===|r"
-    L["HELP_HELP"] = "|cffffffff/fflu help|r - Показать эту помощь"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Воспроизвести тестовый звук"
     L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Включить аддон"
     L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Отключить аддон"
-    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Переключить аддон вкл/выкл"
-    L["HELP_TEST"] = "|cffffffff/fflu test|r - Воспроизвести тестовый звук"
-    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Показать текущие настройки"
-    L["HELP_SOUND"] = "|cffffffff/fflu sound <вариант>|r - Установить звук (high/medium/low)"
-    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Сбросить все настройки на стандартные"
-    L["HELP_VOLUME"] = "|cffffffff/fflu volume <канал>|r - Установить канал громкости (Master/SFX/Music/Ambience)"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <high/med/low>|r - Изменить звук"
     
     L["VOLUME_SET"] = "Канал громкости установлен на: |cffffffff%s|r"
     L["ERROR_INVALID_VOLUME"] = "Недопустимый канал громкости. Используйте: Master, SFX, Music или Ambience"
@@ -124,21 +116,16 @@ elseif locale == "deDE" then
     L["WELCOME_MESSAGE"] = "Willkommen bei FFLU! Tippe |cffffffff/fflu help|r für Befehle"
     
     L["ERROR_PREFIX"] = "|cffff0000FFLU Fehler:|r"
-    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Ungültige Sound-Variante. Verwende: high, medium oder low"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Ungültige Sound-Variante. Verwende: high, med oder low"
     L["ERROR_UNKNOWN_COMMAND"] = "Unbekannter Befehl. Tippe |cffffffff/fflu help|r für verfügbare Befehle"
     L["ERROR_SOUND_FAILED"] = "Fehler beim Abspielen der Sounddatei"
     L["ERROR_INVALID_SOUND_VARIANT"] = "Ungültige Sound-Variante"
     
     L["HELP_HEADER"] = "|cffffe568=== FFLU Befehle ===|r"
-    L["HELP_HELP"] = "|cffffffff/fflu help|r - Diese Hilfe anzeigen"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Testsound abspielen"
     L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Addon aktivieren"
     L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Addon deaktivieren"
-    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Addon ein/aus schalten"
-    L["HELP_TEST"] = "|cffffffff/fflu test|r - Testsound abspielen"
-    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Aktuelle Einstellungen anzeigen"
-    L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Sound setzen (high/medium/low)"
-    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Alle Einstellungen zurücksetzen"
-    L["HELP_VOLUME"] = "|cffffffff/fflu volume <kanal>|r - Lautstärkekanal setzen (Master/SFX/Music/Ambience)"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <high/med/low>|r - Sound ändern"
     
     L["VOLUME_SET"] = "Lautstärkekanal gesetzt auf: |cffffffff%s|r"
     L["ERROR_INVALID_VOLUME"] = "Ungültiger Lautstärkekanal. Verwende: Master, SFX, Music oder Ambience"
@@ -171,21 +158,16 @@ elseif locale == "frFR" then
     L["WELCOME_MESSAGE"] = "Bienvenue dans FFLU ! Tapez |cffffffff/fflu help|r pour les commandes"
     
     L["ERROR_PREFIX"] = "|cffff0000Erreur FFLU:|r"
-    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Variante sonore invalide. Utilisez : high, medium ou low"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Variante sonore invalide. Utilisez : high, med ou low"
     L["ERROR_UNKNOWN_COMMAND"] = "Commande inconnue. Tapez |cffffffff/fflu help|r pour les commandes disponibles"
     L["ERROR_SOUND_FAILED"] = "Échec de la lecture du fichier sonore"
     L["ERROR_INVALID_SOUND_VARIANT"] = "Variante sonore invalide"
     
     L["HELP_HEADER"] = "|cffffe568=== Commandes FFLU ===|r"
-    L["HELP_HELP"] = "|cffffffff/fflu help|r - Afficher cette aide"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Jouer le son de test"
     L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Activer l'addon"
     L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Désactiver l'addon"
-    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Basculer l'addon on/off"
-    L["HELP_TEST"] = "|cffffffff/fflu test|r - Jouer le son de test"
-    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Afficher les paramètres actuels"
-    L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Définir le son (high/medium/low)"
-    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Réinitialiser tous les paramètres"
-    L["HELP_VOLUME"] = "|cffffffff/fflu volume <canal>|r - Définir le canal de volume (Master/SFX/Music/Ambience)"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <high/med/low>|r - Changer le son"
     
     L["VOLUME_SET"] = "Canal de volume défini sur : |cffffffff%s|r"
     L["ERROR_INVALID_VOLUME"] = "Canal de volume invalide. Utilisez : Master, SFX, Music ou Ambience"
@@ -218,21 +200,16 @@ elseif locale == "esES" or locale == "esMX" then
     L["WELCOME_MESSAGE"] = "¡Bienvenido a FFLU! Escribe |cffffffff/fflu help|r para comandos"
     
     L["ERROR_PREFIX"] = "|cffff0000Error FFLU:|r"
-    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Variante de sonido inválida. Usa: high, medium o low"
+    L["ERROR_INVALID_VARIANT_OPTIONS"] = "Variante de sonido inválida. Usa: high, med o low"
     L["ERROR_UNKNOWN_COMMAND"] = "Comando desconocido. Escribe |cffffffff/fflu help|r para comandos disponibles"
     L["ERROR_SOUND_FAILED"] = "Error al reproducir archivo de sonido"
     L["ERROR_INVALID_SOUND_VARIANT"] = "Variante de sonido inválida"
     
     L["HELP_HEADER"] = "|cffffe568=== Comandos FFLU ===|r"
-    L["HELP_HELP"] = "|cffffffff/fflu help|r - Mostrar esta ayuda"
+    L["HELP_TEST"] = "|cffffffff/fflu test|r - Reproducir sonido de prueba"
     L["HELP_ENABLE"] = "|cffffffff/fflu enable|r - Habilitar el addon"
     L["HELP_DISABLE"] = "|cffffffff/fflu disable|r - Deshabilitar el addon"
-    L["HELP_TOGGLE"] = "|cffffffff/fflu toggle|r - Alternar addon on/off"
-    L["HELP_TEST"] = "|cffffffff/fflu test|r - Reproducir sonido de prueba"
-    L["HELP_STATUS"] = "|cffffffff/fflu status|r - Mostrar configuración actual"
-    L["HELP_SOUND"] = "|cffffffff/fflu sound <variante>|r - Establecer sonido (high/medium/low)"
-    L["HELP_RESET"] = "|cffffffff/fflu reset|r - Restablecer toda la configuración"
-    L["HELP_VOLUME"] = "|cffffffff/fflu volume <canal>|r - Establecer canal de volumen (Master/SFX/Music/Ambience)"
+    L["HELP_SOUND"] = "|cffffffff/fflu sound <high/med/low>|r - Cambiar sonido"
     
     L["VOLUME_SET"] = "Canal de volumen establecido en: |cffffffff%s|r"
     L["ERROR_INVALID_VOLUME"] = "Canal de volumen inválido. Usa: Master, SFX, Music o Ambience"

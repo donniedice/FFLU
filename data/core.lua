@@ -10,7 +10,7 @@
 FFLU = FFLU or {}
 
 -- Constants (cached for performance)
-local ADDON_VERSION = "2.1.17"
+local ADDON_VERSION = "2.1.18"
 local ADDON_NAME = "FFLU"
 local ICON_PATH = "|Tinterface/addons/FFLU/images/icon:16:16|t"
 local SOUND_PATHS = {
@@ -36,11 +36,15 @@ FFLU.defaults = {
     firstRun = true
 }
 
--- Saved variables (will be initialized on addon load)
-FFLUSettings = FFLUSettings or {}
+-- Saved variables will be loaded by WoW after ADDON_LOADED event
+-- Do not initialize here as it will override saved settings
 
 -- Initialize addon settings
 function FFLU:InitializeSettings()
+    -- Ensure SavedVariables table exists
+    FFLUSettings = FFLUSettings or {}
+    
+    -- Set defaults for any missing values
     for key, value in pairs(self.defaults) do
         if FFLUSettings[key] == nil then
             FFLUSettings[key] = value
@@ -52,6 +56,11 @@ end
 function FFLU:GetSetting(key)
     if not key or type(key) ~= "string" then
         return nil
+    end
+    
+    -- Return default if SavedVariables not loaded yet
+    if not FFLUSettings then
+        return self.defaults[key]
     end
     
     local value = FFLUSettings[key]
@@ -66,6 +75,11 @@ end
 function FFLU:SetSetting(key, value)
     if not key or type(key) ~= "string" or self.defaults[key] == nil then
         return false
+    end
+    
+    -- Ensure SavedVariables table exists
+    if not FFLUSettings then
+        FFLUSettings = {}
     end
     
     -- Type validation based on default values
@@ -106,9 +120,14 @@ end
 
 -- Mute default level up sound
 function FFLU:MuteDefaultLevelUpSound()
-    if self:GetSetting("muteDefault") then
+    if self:GetSetting("enabled") and self:GetSetting("muteDefault") then
         MuteSoundFile(DEFAULT_SOUND_ID)
     end
+end
+
+-- Unmute default level up sound
+function FFLU:UnmuteDefaultLevelUpSound()
+    UnmuteSoundFile(DEFAULT_SOUND_ID)
 end
 
 -- Display welcome message on player login
@@ -117,14 +136,10 @@ function FFLU:DisplayWelcomeMessage()
         return
     end
     
-    -- Fallback localization if L table doesn't exist
+    -- Ensure localization exists
     if not self.L then
-        self.L = {
-            ENABLED_STATUS = "|cff00ff00Enabled|r",
-            DISABLED_STATUS = "|cffff0000Disabled|r",
-            TYPE_HELP = "Type |cffffffff/fflu help|r for commands",
-            COMMUNITY_MESSAGE = "Part of the RealmGX Community - join us at discord.gg/N7kdKAHVVF"
-        }
+        print(ICON_PATH .. " |cffff0000FFLU Error:|r Localization not loaded")
+        return
     end
     
     -- Cached strings for performance
@@ -146,38 +161,10 @@ end
 
 -- Slash command handler
 function FFLU:HandleSlashCommand(args)
-    -- Ensure localization fallback
+    -- Ensure localization exists
     if not self.L then
-        self.L = {
-            ADDON_ENABLED = "Addon |cff00ff00enabled|r",
-            ADDON_DISABLED = "Addon |cffff0000disabled|r",
-            PLAYING_TEST = "Playing test sound...",
-            SOUND_VARIANT_SET = "Sound variant set to: |cffffffff%s|r",
-            ERROR_PREFIX = "|cffff0000FFLU Error:|r",
-            ERROR_INVALID_VARIANT_OPTIONS = "Invalid sound variant. Use: high, medium, or low",
-            ERROR_UNKNOWN_COMMAND = "Unknown command. Type |cffffffff/fflu help|r for available commands",
-            HELP_HEADER = "|cffffe568=== FFLU Commands ===|r",
-            HELP_HELP = "|cffffffff/fflu help|r - Show this help",
-            HELP_ENABLE = "|cffffffff/fflu enable|r - Enable the addon",
-            HELP_DISABLE = "|cffffffff/fflu disable|r - Disable the addon",
-            HELP_TOGGLE = "|cffffffff/fflu toggle|r - Toggle addon on/off",
-            HELP_TEST = "|cffffffff/fflu test|r - Play test sound",
-            HELP_STATUS = "|cffffffff/fflu status|r - Show current settings",
-            HELP_SOUND = "|cffffffff/fflu sound <variant>|r - Set sound (high/medium/low)",
-            HELP_VOLUME = "|cffffffff/fflu volume <channel>|r - Set volume channel (Master/SFX/Music/Ambience)",
-            HELP_RESET = "|cffffffff/fflu reset|r - Reset all settings to defaults",
-            VOLUME_SET = "Volume channel set to: |cffffffff%s|r",
-            ERROR_INVALID_VOLUME = "Invalid volume channel. Use: Master, SFX, Music, or Ambience",
-            STATUS_HEADER = "|cffffe568=== FFLU Status ===|r",
-            STATUS_STATUS = "Status:",
-            STATUS_SOUND = "Sound Variant: |cffffffff%s|r",
-            STATUS_MUTE = "Mute Default:",
-            STATUS_VERSION = "Version: |cffffffff%s|r",
-            ENABLED_STATUS = "|cff00ff00Enabled|r",
-            DISABLED_STATUS = "|cffff0000Disabled|r",
-            YES = "|cff00ff00Yes|r",
-            NO = "|cffff0000No|r"
-        }
+        print(ICON_PATH .. " |cffff0000FFLU Error:|r Localization not loaded")
+        return
     end
     
     -- Use cached icon path
@@ -187,48 +174,26 @@ function FFLU:HandleSlashCommand(args)
     
     if command == "" or command == "help" then
         self:ShowHelp()
-    elseif command == "enable" then
-        self:SetSetting("enabled", true)
-        print(iconPrefix .. " |cffffe568FFLU:|r " .. self.L["ADDON_ENABLED"])
-    elseif command == "disable" then
-        self:SetSetting("enabled", false)
-        print(iconPrefix .. " |cffffe568FFLU:|r " .. self.L["ADDON_DISABLED"])
-    elseif command == "toggle" then
-        local newState = not self:GetSetting("enabled")
-        self:SetSetting("enabled", newState)
-        local status = newState and self.L["ADDON_ENABLED"] or self.L["ADDON_DISABLED"]
-        print(iconPrefix .. " |cffffe568FFLU:|r " .. status)
     elseif command == "test" then
         print(iconPrefix .. " |cffffe568FFLU:|r " .. self.L["PLAYING_TEST"])
         self:PlayCustomLevelUpSound()
-    elseif command == "status" then
-        self:ShowStatus()
-    elseif command == "reset" then
-        self:ResetSettings()
-    elseif string.match(command, "^sound ") then
-        local variant = string.match(command, "^sound (.+)")
-        -- Validate against our constants table for better performance
-        if variant and SOUND_PATHS[variant] then
-            self:SetSetting("soundVariant", variant)
-            print(iconPrefix .. " |cffffe568FFLU:|r " .. string.format(self.L["SOUND_VARIANT_SET"], variant))
-        else
-            print(iconPrefix .. " " .. self.L["ERROR_PREFIX"] .. " " .. self.L["ERROR_INVALID_VARIANT_OPTIONS"])
-        end
-    elseif string.match(command, "^volume ") then
-        local channel = string.match(command, "^volume (.+)")
-        if channel then
-            -- Capitalize first letter for consistency
-            channel = channel:sub(1,1):upper() .. channel:sub(2):lower()
-            -- Validate volume channels
-            if channel == "Master" or channel == "Sfx" or channel == "Music" or channel == "Ambience" then
-                -- Fix SFX capitalization
-                if channel == "Sfx" then channel = "SFX" end
-                self:SetSetting("volume", channel)
-                print(iconPrefix .. " |cffffe568FFLU:|r " .. string.format(self.L["VOLUME_SET"] or "Volume channel set to: |cffffffff%s|r", channel))
-            else
-                print(iconPrefix .. " " .. self.L["ERROR_PREFIX"] .. " " .. (self.L["ERROR_INVALID_VOLUME"] or "Invalid volume channel. Use: Master, SFX, Music, or Ambience"))
-            end
-        end
+    elseif command == "enable" then
+        self:SetSetting("enabled", true)
+        self:MuteDefaultLevelUpSound()
+        print(iconPrefix .. " |cffffe568FFLU:|r " .. self.L["ADDON_ENABLED"])
+    elseif command == "disable" then
+        self:SetSetting("enabled", false)
+        self:UnmuteDefaultLevelUpSound()
+        print(iconPrefix .. " |cffffe568FFLU:|r " .. self.L["ADDON_DISABLED"])
+    elseif command == "high" then
+        self:SetSetting("soundVariant", "high")
+        print(iconPrefix .. " |cffffe568FFLU:|r " .. string.format(self.L["SOUND_VARIANT_SET"], "high"))
+    elseif command == "med" or command == "medium" then
+        self:SetSetting("soundVariant", "medium")
+        print(iconPrefix .. " |cffffe568FFLU:|r " .. string.format(self.L["SOUND_VARIANT_SET"], "medium"))
+    elseif command == "low" then
+        self:SetSetting("soundVariant", "low")
+        print(iconPrefix .. " |cffffe568FFLU:|r " .. string.format(self.L["SOUND_VARIANT_SET"], "low"))
     else
         print(iconPrefix .. " " .. self.L["ERROR_PREFIX"] .. " " .. self.L["ERROR_UNKNOWN_COMMAND"])
     end
@@ -236,47 +201,34 @@ end
 
 -- Show help information
 function FFLU:ShowHelp()
+    -- Ensure localization exists
+    if not self.L then
+        print(ICON_PATH .. " |cffff0000FFLU Error:|r Localization not loaded")
+        return
+    end
+    
     local iconPrefix = ICON_PATH
     print(iconPrefix .. " " .. self.L["HELP_HEADER"])
-    print(iconPrefix .. " " .. self.L["HELP_HELP"])
+    print(iconPrefix .. " " .. self.L["HELP_TEST"])
     print(iconPrefix .. " " .. self.L["HELP_ENABLE"])
     print(iconPrefix .. " " .. self.L["HELP_DISABLE"])
-    print(iconPrefix .. " " .. self.L["HELP_TOGGLE"])
-    print(iconPrefix .. " " .. self.L["HELP_TEST"])
-    print(iconPrefix .. " " .. self.L["HELP_STATUS"])
-    print(iconPrefix .. " " .. self.L["HELP_SOUND"])
-    print(iconPrefix .. " " .. (self.L["HELP_VOLUME"] or "|cffffffff/fflu volume <channel>|r - Set volume channel (Master/SFX/Music/Ambience)"))
-    print(iconPrefix .. " " .. self.L["HELP_RESET"])
-    print(iconPrefix .. " " .. (self.L["COMMUNITY_MESSAGE"] or "Part of the RealmGX Community - join us at discord.gg/N7kdKAHVVF"))
+    print(iconPrefix .. " |cffffffff/fflu high|r - Use high quality sound")
+    print(iconPrefix .. " |cffffffff/fflu med|r - Use medium quality sound")
+    print(iconPrefix .. " |cffffffff/fflu low|r - Use low quality sound")
 end
 
--- Show current status
-function FFLU:ShowStatus()
-    local iconPrefix = ICON_PATH
-    print(iconPrefix .. " " .. self.L["STATUS_HEADER"])
-    local enabled = self:GetSetting("enabled")
-    print(iconPrefix .. " " .. self.L["STATUS_STATUS"] .. " " .. (enabled and self.L["ENABLED_STATUS"] or self.L["DISABLED_STATUS"]))
-    print(iconPrefix .. " " .. string.format(self.L["STATUS_SOUND"], self:GetSetting("soundVariant")))
-    print(iconPrefix .. " " .. self.L["STATUS_MUTE"] .. " " .. (self:GetSetting("muteDefault") and self.L["YES"] or self.L["NO"]))
-    print(iconPrefix .. " " .. string.format(self.L["STATUS_VERSION"], ADDON_VERSION))
-    print(iconPrefix .. " " .. string.format(self.L["STATUS_VOLUME"] or "Volume Channel: |cffffffff%s|r", self:GetSetting("volume")))
-end
+-- Removed ShowStatus and ResetSettings functions - no longer needed
 
--- Reset all settings to defaults
-function FFLU:ResetSettings()
-    local iconPrefix = ICON_PATH
-    for key, value in pairs(self.defaults) do
-        FFLUSettings[key] = value
-    end
-    -- Set first run back to true to show community message
-    self:SetSetting("firstRun", true)
-    print(iconPrefix .. " |cffffe568FFLU:|r Settings reset to defaults")
-end
+-- Track initialization state
+FFLU.initialized = false
 
 -- Event handler function (optimized with early returns)
 function FFLU:OnEvent(event, ...)
     if event == "PLAYER_LEVEL_UP" then
-        self:PlayCustomLevelUpSound()
+        -- Only play sound if addon is fully initialized
+        if self.initialized then
+            self:PlayCustomLevelUpSound()
+        end
         return
     end
     
@@ -285,11 +237,18 @@ function FFLU:OnEvent(event, ...)
         if addonName == ADDON_NAME then
             self:InitializeSettings()
             self:MuteDefaultLevelUpSound()
+            self.initialized = true
         end
         return
     end
     
     if event == "PLAYER_LOGIN" then
+        -- Ensure we're initialized before showing welcome
+        if not self.initialized then
+            self:InitializeSettings()
+            self:MuteDefaultLevelUpSound()
+            self.initialized = true
+        end
         self:DisplayWelcomeMessage()
     end
 end
