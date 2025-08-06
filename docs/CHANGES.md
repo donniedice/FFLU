@@ -1,5 +1,21 @@
 # FFLU Changelog
 
+## Version 2.1.20
+
+### Added
+- Discord webhook secret configured for automated notifications
+- Repository prepared for Discord integration
+
+### Changed  
+- Version bump to 2.1.20
+- Updated all TOC files for new version
+
+### Technical Notes
+- Discord webhook is now configured and ready
+- GitHub Actions workflow will support Discord notifications in future releases
+
+---
+
 ## v2.1.17 - Documentation Updates & Folder Standardization
 
 ### Changed
