@@ -1,61 +1,33 @@
-# <span style="color:#ff6b6b">🎵 </span> <span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">L</span><span style="color:#ff6b6b">U</span> <span style="color:#3598db">|</span> <span style="color:#ff6b6b">F</span><span style="color:#fff">inal </span> <span style="color:#ff6b6b">F</span><span style="color:#fff">antasy </span> <span style="color:#ff6b6b">L</span><span style="color:#fff">evel-</span><span style="color:#ff6b6b">U</span><span style="color:#fff">p!</span>
-## <span style="color:#4ecdc4">🎮 </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#3598db">-</span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span>](https://realmgx.com) <span style="color:#ff6b6b">Community Project</span>
+# ![FFLU Logo](images/FFLU_logo_400x400.png) <span style="color:#ffe568">F</span><span style="color:#ffe568">F</span><span style="color:#ffe568">L</span><span style="color:#ffe568">U</span> <span style="color:#3598db">|</span> <span style="color:#ffe568">F</span><span style="color:#fff">inal </span> <span style="color:#ffe568">F</span><span style="color:#fff">antasy </span> <span style="color:#ffe568">L</span><span style="color:#fff">evel-</span><span style="color:#ffe568">U</span><span style="color:#fff">p</span><span style="color:#ffe568">!</span>
+## <img src="https://raw.githubusercontent.com/donniedice/SimpleQuestPlates/main/images/kiwi.gif" height="20"> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#3598db">-</span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span>](https://realmgx.com) <span style="color:#ffe568">Community Project</span>
 
 <div align="center">
 
-<img src="images/FFLU_logo_400x400.png" alt="FFLU Logo" width="128" height="128">
-
-[![FFLU Icon](https://img.shields.io/badge/FFLU-Final%20Fantasy%20Level%20Up!-ff6b6b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/donniedice/FFLU)
+[![FFLU Icon](https://img.shields.io/badge/FFLU-Final%20Fantasy%20Level%20Up!-ffe568?style=for-the-badge&logo=github&logoColor=white)](https://github.com/donniedice/FFLU)
 [![RGX Mods](https://img.shields.io/badge/RGX-Mods%20Collection-8B1538?style=for-the-badge&logo=github&logoColor=white)](https://discord.gg/N7kdKAHVVF)
 
-### <span style="color:#ff6b6b">🌟 Join the </span> <span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Community</span> <span style="color:#3598db">-</span> <span style="color:#8B1538">G</span><span style="color:#7598b6">amers e</span><span style="color:#8B1538">X</span><span style="color:#7598b6">treme!</span> <span style="color:#ff6b6b">🌟</span>
-[![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=7289da&label=Join%20Our%20Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/N7kdKAHVVF)
+### <span style="color:#ffe568">🌟 Join the </span> <span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Community</span> <span style="color:#3598db">-</span> <span style="color:#8B1538">G</span><span style="color:#7598b6">amers e</span><span style="color:#8B1538">X</span><span style="color:#7598b6">treme!</span> <span style="color:#ffe568">🌟</span>
+[![Discord](https://img.shields.io/badge/Join%20Our%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/N7kdKAHVVF)
 
-### <span style="color:#ff6b6b">🎵 </span> <span style="color:#e67e23">*"Victory Fanfare!"* - Now in World of Warcraft!</span> <span style="color:#ff6b6b">🎵</span>
+### <span style="color:#ffe568">🎵 </span> <span style="color:#e67e23">*"Victory Fanfare!"* - Now in World of Warcraft!</span> <span style="color:#ffe568">🎵</span>
 
-**<span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">L</span><span style="color:#ff6b6b">U</span> <span style="color:#3598db">|</span> <span style="color:#ff6b6b">F</span><span style="color:#fff">inal </span> <span style="color:#ff6b6b">F</span><span style="color:#fff">antasy </span> <span style="color:#ff6b6b">L</span><span style="color:#fff">evel-</span><span style="color:#ff6b6b">U</span><span style="color:#fff">p!</span>** <span style="color:#e67e23">is a professional</span> <span style="color:#06c">World of Warcraft</span> <span style="color:#e67e23">addon that transforms your leveling experience with the iconic Final Fantasy level-up sound!</span>
+**<span style="color:#ffe568">F</span><span style="color:#ffe568">F</span><span style="color:#ffe568">L</span><span style="color:#ffe568">U</span> <span style="color:#3598db">|</span> <span style="color:#ffe568">F</span><span style="color:#fff">inal </span> <span style="color:#ffe568">F</span><span style="color:#fff">antasy </span> <span style="color:#ffe568">L</span><span style="color:#fff">evel-</span><span style="color:#ffe568">U</span><span style="color:#fff">p</span><span style="color:#ffe568">!</span>** <span style="color:#e67e23">is a professional</span> <span style="color:#06c">World of Warcraft</span> <span style="color:#e67e23">addon that transforms your leveling experience with the iconic Final Fantasy level-up sound!</span>
 
-**<span style="color:#ff6b6b">🎮 </span> <span style="color:#e67e23">Connect with fellow gamers, get support, and be part of the</span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#e67e23">family!</span>**
+**<span style="color:#ffe568">🎮 </span> <span style="color:#e67e23">Connect with fellow gamers, get support, and be part of the</span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#e67e23">family!</span>**
 
-<!-- GitHub Stats & Badges -->
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/donniedice/FFLU?style=for-the-badge&logo=github&color=success)](https://github.com/donniedice/FFLU/releases)
-[![GitHub stars](https://img.shields.io/github/stars/donniedice/FFLU?style=for-the-badge&logo=github&color=yellow)](https://github.com/donniedice/FFLU/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/donniedice/FFLU?style=for-the-badge&logo=github&color=blue)](https://github.com/donniedice/FFLU/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/donniedice/FFLU?style=for-the-badge&logo=github&color=red)](https://github.com/donniedice/FFLU/issues)
-[![GitHub license](https://img.shields.io/github/license/donniedice/FFLU?style=for-the-badge&logo=github&color=lightgrey)](https://github.com/donniedice/FFLU/blob/main/LICENSE)
+---
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU/commits/main)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU/graphs/commit-activity)
-[![GitHub repo size](https://img.shields.io/github/repo-size/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU)
-[![GitHub code size](https://img.shields.io/github/languages/code-size/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU)
-[![GitHub top language](https://img.shields.io/github/languages/top/donniedice/FFLU?style=flat-square&logo=lua)](https://github.com/donniedice/FFLU)
-[![GitHub language count](https://img.shields.io/github/languages/count/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU)
-[![GitHub contributors](https://img.shields.io/github/contributors/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU/graphs/contributors)
-[![GitHub all releases](https://img.shields.io/github/downloads/donniedice/FFLU/total?style=flat-square&logo=github)](https://github.com/donniedice/FFLU/releases)
-[![GitHub release date](https://img.shields.io/github/release-date/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU/releases)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU/issues?q=is%3Aissue+is%3Aclosed)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU/pulls)
-[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/donniedice/FFLU?style=flat-square&logo=github)](https://github.com/donniedice/FFLU/pulls?q=is%3Apr+is%3Aclosed)
+| | | |
+|---|---|---|
+| [![GitHub release](https://img.shields.io/github/v/release/donniedice/FFLU?style=for-the-badge&logo=github&color=success)](https://github.com/donniedice/FFLU/releases) | [![GitHub stars](https://img.shields.io/github/stars/donniedice/FFLU?style=for-the-badge&logo=github&color=yellow)](https://github.com/donniedice/FFLU/stargazers) | [![GitHub issues](https://img.shields.io/github/issues/donniedice/FFLU?style=for-the-badge&logo=github&color=red)](https://github.com/donniedice/FFLU/issues) |
+| [![CurseForge](https://img.shields.io/badge/CurseForge-Downloads-orange?style=flat-square)](https://www.curseforge.com/wow/addons/fflu) | [![Wago](https://img.shields.io/badge/Wago.io-Downloads-purple?style=flat-square)](https://addons.wago.io/addons/fflu) | [![WoWInterface](https://img.shields.io/badge/WoWInterface-Downloads-blue?style=flat-square)](https://www.wowinterface.com/downloads/info26252) |
+| [![Made with Lua](https://img.shields.io/badge/Made%20with-Lua-blue?style=flat-square&logo=lua)](https://www.lua.org/) | [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/donniedice/FFLU/pulls) | [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square)](https://github.com/donniedice/FFLU) |
 
-<!-- Platform Badges -->
-[![CurseForge Downloads](https://img.shields.io/badge/CurseForge-Downloads-orange?style=flat-square&logo=curseforge)](https://www.curseforge.com/wow/addons/fflu)
-[![Wago Downloads](https://img.shields.io/badge/Wago.io-Downloads-purple?style=flat-square&logo=wago)](https://addons.wago.io/addons/fflu)
-[![WoWInterface Downloads](https://img.shields.io/badge/WoWInterface-Downloads-blue?style=flat-square&logo=worldofwarcraft)](https://www.wowinterface.com/downloads/info26264-FFLU-FinalFantasyLevelUp.html)
-
-<!-- Additional Stats -->
-[![Made with Lua](https://img.shields.io/badge/Made%20with-Lua-blue?style=flat-square&logo=lua)](https://www.lua.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/donniedice/FFLU/pulls)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square)](https://github.com/donniedice/FFLU/graphs/commit-activity)
-
-<!-- WoW Compatibility -->
-[![WoW Retail](https://img.shields.io/badge/WoW-The%20War%20Within-green?style=flat-square&logo=worldofwarcraft)](https://worldofwarcraft.com)
-[![WoW Classic](https://img.shields.io/badge/WoW-Classic%20Era-green?style=flat-square&logo=worldofwarcraft)](https://worldofwarcraft.com)
-[![WoW Cataclysm](https://img.shields.io/badge/WoW-Cataclysm%20Classic-green?style=flat-square&logo=worldofwarcraft)](https://worldofwarcraft.com)
-[![WoW MoP](https://img.shields.io/badge/WoW-Mists%20of%20Pandaria-green?style=flat-square&logo=worldofwarcraft)](https://worldofwarcraft.com)
+---
 
 </div>
 
-## <span style="color:#ff6b6b">🌟 Join the </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods Community!</span>
+## <span style="color:#ffe568">🌟 Join the </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods Community!</span>
 
 <div align="center">
 
@@ -63,7 +35,7 @@
 
 [![Join Discord](https://img.shields.io/badge/Join%20Our%20Discord-RealmGX%20Community-7289da?style=for-the-badge&logo=discord&logoColor=white&labelColor=5865F2)](https://discord.gg/N7kdKAHVVF)
 
-**<span style="color:#ff6b6b">🎮 </span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm </span> <span style="color:#8B1538">G</span><span style="color:#7598b6">amers e</span><span style="color:#8B1538">X</span><span style="color:#7598b6">treme</span>](https://realmgx.com) <span style="color:#3598db">-</span> <span style="color:#4ecdc4">Where WoW Enthusiasts Unite!</span>**
+**<span style="color:#ffe568">🎮 </span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm </span> <span style="color:#8B1538">G</span><span style="color:#7598b6">amers e</span><span style="color:#8B1538">X</span><span style="color:#7598b6">treme</span>](https://realmgx.com) <span style="color:#3598db">-</span> <span style="color:#4ecdc4">Where WoW Enthusiasts Unite!</span>**
 
 **<span style="color:#e67e23">✨ What awaits you in our Discord</span><span style="color:#3598db">:</span>**
 - <span style="color:#2dc26b">🛠️ <strong>Instant addon support</strong></span> <span style="color:#e67e23">from the</span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#e67e23">team</span>
@@ -89,35 +61,23 @@
 
 **<span style="color:#e67e23">Your support helps keep</span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#e67e23">alive and constantly improving!</span>**
 
-<table align="center" width="100%">
-<tr>
-<td align="center" width="50%">
+| | |
+|---|---|
+| [![Donate](https://img.shields.io/badge/Donate-CashApp-00C853?style=for-the-badge&logo=cash-app&logoColor=white)](https://bit.ly/3fyxxSU) | [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/donniedice) |
+| [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ff69b4?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/donniedice) | [![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/donniedice) |
 
-[![Donate](https://img.shields.io/badge/Donate-CashApp-00C853?style=for-the-badge&logo=cash-app&logoColor=white)](https://bit.ly/3fyxxSU)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/donniedice)
-
-</td>
-<td align="center" width="50%">
-
-[![GitHub Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ff69b4?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/donniedice)
-[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/donniedice)
-
-</td>
-</tr>
-</table>
-
-[![Star this repository](https://img.shields.io/badge/⭐-Star%20this%20repository-yellow?style=for-the-badge&logo=github)](https://github.com/donniedice/FFLU)
+[![Star this repository](https://img.shields.io/github/stars/donniedice/FFLU?label=Star%20this%20repository&style=for-the-badge&color=yellow)](https://github.com/donniedice/FFLU)
 
 _<span style="color:#e67e23">Every donation helps fund new features and improvements!</span>_
 
 </div>
 
-## <span style="color:#ff6b6b">🎯 What is </span> <span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">L</span><span style="color:#ff6b6b">U</span><span style="color:#ff6b6b">?</span>
+## <span style="color:#ffe568">🎯 What is </span> <span style="color:#ffe568">F</span><span style="color:#ffe568">F</span><span style="color:#ffe568">L</span><span style="color:#ffe568">U</span><span style="color:#ffe568">?</span>
 
-**<span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">L</span><span style="color:#ff6b6b">U</span> <span style="color:#3598db">|</span> <span style="color:#ff6b6b">F</span><span style="color:#fff">inal </span> <span style="color:#ff6b6b">F</span><span style="color:#fff">antasy </span> <span style="color:#ff6b6b">L</span><span style="color:#fff">evel-</span><span style="color:#ff6b6b">U</span><span style="color:#fff">p!</span>** <span style="color:#e67e23">is the ultimate</span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#e67e23">creation for bringing that triumphant</span> **<span style="color:#ff6b6b">"Victory Fanfare!"</span>** <span style="color:#e67e23">feeling from Final Fantasy directly into your</span> <span style="color:#06c">World of Warcraft</span> <span style="color:#e67e23">experience. No more bland WoW level-up sounds – now you get the legendary fanfare that made every Final Fantasy level-up feel like a true victory!</span>
+**<span style="color:#ffe568">F</span><span style="color:#ffe568">F</span><span style="color:#ffe568">L</span><span style="color:#ffe568">U</span> <span style="color:#3598db">|</span> <span style="color:#ffe568">F</span><span style="color:#fff">inal </span> <span style="color:#ffe568">F</span><span style="color:#fff">antasy </span> <span style="color:#ffe568">L</span><span style="color:#fff">evel-</span><span style="color:#ffe568">U</span><span style="color:#fff">p</span><span style="color:#ffe568">!</span>** <span style="color:#e67e23">is the ultimate</span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#e67e23">creation for bringing that triumphant</span> **<span style="color:#ffe568">"Victory Fanfare!"</span>** <span style="color:#e67e23">feeling from Final Fantasy directly into your</span> <span style="color:#06c">World of Warcraft</span> <span style="color:#e67e23">experience. No more bland WoW level-up sounds – now you get the legendary fanfare that made every Final Fantasy level-up feel like a true victory!</span>
 
-### <span style="color:#ff6b6b">🔥 Why Choose </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#3598db">-</span> <span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">L</span><span style="color:#ff6b6b">U</span><span style="color:#ff6b6b">?</span>
-- **<span style="color:#ff6b6b">🎮 </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Quality</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Built by the</span> <span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#e67e23">community with passion</span>
+### <span style="color:#ffe568">🔥 Why Choose </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#3598db">-</span> <span style="color:#ffe568">F</span><span style="color:#ffe568">F</span><span style="color:#ffe568">L</span><span style="color:#ffe568">U</span><span style="color:#ffe568">?</span>
+- **<span style="color:#ffe568">🎮 </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Quality</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Built by the</span> <span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#e67e23">community with passion</span>
 - **<span style="color:#2dc26b">🌟 Community-Driven</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Developed with input from fellow gamers</span>
 - **<span style="color:#b96ad9">🛠️ Professional Standards</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Modern</span> <span style="color:#06c">WoW</span> <span style="color:#e67e23">addon architecture</span>
 - **<span style="color:#4ecdc4">🌍 Multi-Language</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Supports English, Russian, German, French, and Spanish</span>
@@ -135,7 +95,7 @@ _<span style="color:#e67e23">Every donation helps fund new features and improvem
 ### <span style="color:#4ecdc4">🎵 Audio Experience</span>
 - **<span style="color:#2dc26b">Custom FF Sound</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Authentic Final Fantasy fanfare</span>
 - **<span style="color:#58be81">Quality Options</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">High, medium, or low quality variants</span>
-- **<span style="color:#ff6b6b">Volume Control</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Master channel integration</span>
+- **<span style="color:#ffe568">Volume Control</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Master channel integration</span>
 - **<span style="color:#b96ad9">Smart Muting</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Auto-mute WoW's default sound</span>
 
 </td>
@@ -144,7 +104,7 @@ _<span style="color:#e67e23">Every donation helps fund new features and improvem
 ### <span style="color:#4ecdc4">⚙️ Advanced Settings</span>
 - **<span style="color:#2dc26b">Persistent Configuration</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Settings saved across sessions</span>
 - **<span style="color:#58be81">Instant Commands</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Simplified slash command system</span>
-- **<span style="color:#ff6b6b">Error Handling</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Robust protection against crashes</span>
+- **<span style="color:#ffe568">Error Handling</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Robust protection against crashes</span>
 - **<span style="color:#b96ad9">Performance Optimized</span><span style="color:#3598db">:</span>** <span style="color:#e67e23">Efficient memory usage</span>
 
 </td>
@@ -165,7 +125,7 @@ _<span style="color:#e67e23">Every donation helps fund new features and improvem
 ### <span style="color:#4ecdc4">🎮 WoW Compatibility</span>
 - **<span style="color:#2dc26b">The War Within</span>** <span style="color:#3598db">(</span><span style="color:#e67e23">Retail</span><span style="color:#3598db">)</span>
 - **<span style="color:#58be81">Classic WoW</span>** <span style="color:#3598db">(</span><span style="color:#e67e23">Era</span><span style="color:#3598db">)</span>
-- **<span style="color:#ff6b6b">Classic Cataclysm</span>**
+- **<span style="color:#ffe568">Classic Cataclysm</span>**
 - **<span style="color:#b96ad9">Mists of Pandaria</span>**
 
 </td>
@@ -174,9 +134,9 @@ _<span style="color:#e67e23">Every donation helps fund new features and improvem
 
 </div>
 
-## <span style="color:#ff6b6b">🚀 Quick Start</span>
+## <span style="color:#ffe568">🚀 Quick Start</span>
 
-1. **<span style="color:#2dc26b">Download</span>** <span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">F</span><span style="color:#ff6b6b">L</span><span style="color:#ff6b6b">U</span> <span style="color:#e67e23">from your preferred platform</span><span style="color:#3598db">:</span>
+1. **<span style="color:#2dc26b">Install</span>** <span style="color:#ffe568">F</span><span style="color:#ffe568">F</span><span style="color:#ffe568">L</span><span style="color:#ffe568">U</span> <span style="color:#e67e23">from your preferred platform</span><span style="color:#3598db">:</span>
    - [<span style="color:#4ecdc4">CurseForge</span>](https://www.curseforge.com/wow/addons/fflu) _<span style="color:#e67e23">(Recommended)</span>_
    - [<span style="color:#24292e">GitHub</span>](https://github.com/donniedice/FFLU)
    - [<span style="color:#b96ad9">Wago.io</span>](https://addons.wago.io/addons/fflu)
@@ -404,7 +364,7 @@ _<span style="color:#e67e23">"May your levels be swift and your fanfares be lege
 
 [![GitHub Stars](https://img.shields.io/github/stars/donniedice/FFLU?style=for-the-badge&logo=github)](https://github.com/donniedice/FFLU)
 
-**<span style="color:#ff6b6b">🎮 </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#3598db">-</span> <span style="color:#ff6b6b">Powered by </span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span>](https://realmgx.com) <span style="color:#ff6b6b">Community</span>**
+**<span style="color:#ffe568">🎮 </span> <span style="color:#8B1538">R</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span> <span style="color:#4ecdc4">Mods</span> <span style="color:#3598db">-</span> <span style="color:#ff6b6b">Powered by </span> [<span style="color:#8B1538">R</span><span style="color:#7598b6">ealm</span><span style="color:#8B1538">G</span><span style="color:#8B1538">X</span>](https://realmgx.com) <span style="color:#ff6b6b">Community</span>**
 
 </div>
 
