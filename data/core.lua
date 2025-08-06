@@ -10,7 +10,7 @@
 FFLU = FFLU or {}
 
 -- Constants (cached for performance)
-local ADDON_VERSION = "2.1.18"
+local ADDON_VERSION = "2.1.19"
 local ADDON_NAME = "FFLU"
 local ICON_PATH = "|Tinterface/addons/FFLU/images/icon:16:16|t"
 local SOUND_PATHS = {
