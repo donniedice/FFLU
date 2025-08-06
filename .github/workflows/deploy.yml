@@ -1,0 +1,101 @@
+name: Deploy and Notify
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number for manual deployment'
+        required: true
+        type: string
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Get release information
+        id: release_info
+        run: |
+          if [ "${{ github.event_name }}" == "release" ]; then
+            echo "version=${{ github.event.release.tag_name }}" >> $GITHUB_OUTPUT
+            
+            # Handle multi-line body properly
+            BODY=$(echo "${{ github.event.release.body }}" | head -c 500 | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/\\n/g')
+            echo "body=$BODY" >> $GITHUB_OUTPUT
+            
+            echo "url=${{ github.event.release.html_url }}" >> $GITHUB_OUTPUT
+            echo "name=${{ github.event.release.name }}" >> $GITHUB_OUTPUT
+          else
+            echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+            echo "body=Manual deployment triggered" >> $GITHUB_OUTPUT
+            echo "url=${{ github.server_url }}/${{ github.repository }}" >> $GITHUB_OUTPUT
+            echo "name=FFLU ${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Send Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          # Create RGX Mods standard Discord message
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d "{
+                 \"content\": \"\",
+                 \"username\": \"FFLU Update\",
+                 \"avatar_url\": \"https://raw.githubusercontent.com/donniedice/FFLU/main/images/logo.png\",
+                 \"embeds\": [{
+                   \"title\": \"⚔️ FFLU | Final Fantasy Level Up! - ${{ steps.release_info.outputs.version }}\",
+                   \"description\": \"**Victory Fanfare!** - A new version of FFLU has been released!\\n\\n🎵 **What's New:**\\n• Check the release notes for full details\\n• Bug fixes and performance improvements\\n\\n**Experience the legendary Final Fantasy victory fanfare every time you level up in WoW!**\",
+                   \"url\": \"${{ steps.release_info.outputs.url }}\",
+                   \"color\": 16766720,
+                   \"thumbnail\": {
+                     \"url\": \"https://raw.githubusercontent.com/donniedice/FFLU/main/images/logo.png\"
+                   },
+                   \"fields\": [
+                     {
+                       \"name\": \"📥 Downloads\",
+                       \"value\": \"[CurseForge](https://www.curseforge.com/wow/addons/fflu)\\n[Wago.io](https://addons.wago.io/addons/fflu)\\n[GitHub](https://github.com/donniedice/FFLU)\",
+                       \"inline\": true
+                     },
+                     {
+                       \"name\": \"🎮 Compatibility\",
+                       \"value\": \"✅ The War Within\\n✅ Classic Era\\n✅ Cataclysm\\n✅ MoP\",
+                       \"inline\": true
+                     },
+                     {
+                       \"name\": \"💬 Support\",
+                       \"value\": \"[Join Discord](https://discord.gg/N7kdKAHVVF)\\n[Report Issues](https://github.com/donniedice/FFLU/issues)\",
+                       \"inline\": true
+                     }
+                   ],
+                   \"footer\": {
+                     \"text\": \"RGX Mods - RealmGX Community\",
+                     \"icon_url\": \"https://raw.githubusercontent.com/donniedice/SimpleQuestPlates/main/images/kiwi.gif\"
+                   },
+                   \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"
+                 }]
+               }" \
+               "$DISCORD_WEBHOOK"
+      
+      - name: Deploy to CurseForge
+        if: github.event_name == 'release'
+        env:
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+        run: |
+          echo "CurseForge deployment would happen here"
+          echo "This step requires the CurseForge API token to be configured"
+          # Add actual CurseForge deployment logic here when API token is available
+      
+      - name: Deploy to Wago
+        if: github.event_name == 'release'
+        env:
+          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+        run: |
+          echo "Wago deployment would happen here"
+          echo "This step requires the Wago API token to be configured"
+          # Add actual Wago deployment logic here when API token is available
