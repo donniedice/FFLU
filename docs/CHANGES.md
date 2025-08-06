@@ -1,5 +1,17 @@
 # FFLU Changelog
 
+## Version 2.1.21
+
+### Fixed
+- Discord webhook notifications now properly configured in GitHub Actions workflow
+- Resolved issue where Discord notifications were not being sent on releases
+
+### Technical Notes
+- GitHub Actions workflow updated with Discord notification steps
+- Webhook integration fully tested and operational
+
+---
+
 ## Version 2.1.20
 
 ### Added
